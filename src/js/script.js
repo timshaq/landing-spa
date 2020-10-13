@@ -1,3 +1,4 @@
+"use strict"
 document.addEventListener("DOMContentLoaded", function() {
 	
 
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	/*    /SLICK    */
 
-	/*    burger    */
+	/*    burger + card poup    */
 	var html = document.getElementById('html');
 
 	var burger = document.getElementById('burger');
@@ -144,11 +145,58 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	})
 
-	/*    /burger    */
+
+
+	var prodCard = document.getElementById('prodCard');
+	var closeProdCard = document.getElementById('closeProdCard');
+
+
+	var buyButtonNL = document.querySelectorAll('.prodslider__slider-btn');
+	var buyButtonList = Array.prototype.slice.call(buyButtonNL);
+
+	function closeProductCard() {
+		prodCard.classList.remove('active');
+		enableScroll();
+	}
+
+	function openProductCard() {
+		prodCard.classList.add('active');
+		disableScroll();
+
+	}
+
+	buyButtonList.forEach(btn => {
+		btn.addEventListener('click', function(ev) {
+			ev.preventDefault();
+			openProductCard();
+		})
+	})
+
+	closeProdCard.addEventListener('click', function(ev) {
+		ev.preventDefault();
+		closeProductCard();
+	})
+
+
+
+	/*    /burger + card poup   */
 
 	/*    smooth scroll to element*/
 
-	document.querySelectorAll('a[href^="#"').forEach(link => {
+	var allLinkNL = document.querySelectorAll('a');
+	var allLinkList = Array.prototype.slice.call(allLinkNL);
+	var achorList = [];
+
+	allLinkList.forEach((anchor => {
+		var pattern = /^#/;
+		var href = anchor.getAttribute('href')
+		var test = pattern.exec(href);
+		if (test) achorList.push(anchor)
+	}));
+
+
+
+	achorList.forEach(link => {
 
 	    link.addEventListener('click', function(e) {
 	        e.preventDefault();
@@ -156,9 +204,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	        let href = this.getAttribute('href').substring(1);
 
 	        const scrollTarget = document.getElementById(href);
-
-	        const topOffset = document.querySelector(`#${href}`).offsetHeight;
-	        // const topOffset = 0; // если не нужен отступ сверху 
 	        const elementPosition = scrollTarget.getBoundingClientRect().top;
 	        const offsetPosition = elementPosition - 100;
 
@@ -224,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	var statusFaqAnim = false;
 	function startFaqAnim () {
 		statusFaqAnim = true
-		setTimeout(() => { statusFaqAnim = false }, 20000)
+		setTimeout(() => { statusFaqAnim = false }, 9000)
 		var minSec = 100;
 		var maxSec = 500;
 
@@ -260,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		var prom1 = new Promise((resolve) => {
 			setCircleAnimStart();
-			setTimeout(() => {resolve();},4200);
+			setTimeout(() => {resolve();},1000);
 		});
 
 		prom1.then(() => {
@@ -269,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 
 		var nums = [num12,num22,num32];
-		var numsTimeout = [4000,7000,2000];
+		var numsTimeout = [2500,3000,1600];
 
 		
 		function setNumColor(start = 0) {
@@ -353,32 +398,32 @@ var Visible = function (target, windowVW = windowVW) {
 				case 200:
 				case 300:
 					bgAnim.style.transform = 'scale(1)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(74.5% at 0 ${animRadius}px)`;
 					break;
 				case 400:
 					bgAnim.style.transform = 'scale(2)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(1039.95px at 248.823px ${animRadius}px)`;
 					break;
 				case 500:
 					bgAnim.style.transform = 'scale(3)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
 					break;
 				case 600:
 					bgAnim.style.transform = 'scale(4)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
 					break;
 				case 700:
 					bgAnim.style.transform = 'scale(5)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
 					break;
 				case 800:
 					bgAnim.style.transform = 'scale(6)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
 					break;
 				case 900:
 				default:
 					bgAnim.style.transform = 'scale(7)';
-					textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+					// textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
 					break;
 			}
 		}
@@ -454,6 +499,54 @@ circleToNums(faq);
 
 
 	/*    /ANIM BLOCK TO CIRCLE    */
+
+
+	/*    FOTORAMA    */
+		$('#promodalGallery').fotorama({
+			width: '100%',
+			maxwidth: '100%',
+			ratio: 16/9,
+			allowfullscreen: true,
+			nav: 'thumbs',
+			thumbmargin: 20,
+			swipe: true
+		});
+	/*    /FOTORAMA    */
+
+
+
+	/*    mail    */
+
+
+
+	var formNL = document.querySelectorAll('.same__form');
+	var formList = Array.prototype.slice.call(formNL);
+
+
+	formList.forEach(form => {
+		$(form).on( "submit", function(ev) {
+			ev.preventDefault();
+			var sendBody = $(this).serialize();
+			console.log(sendBody);
+
+			fetch("./send.php", { 
+				method: "POST",
+				body: sendBody,   
+				headers:{"content-type": "application/x-www-form-urlencoded"} 
+			})
+				.catch((err) => {
+					alert('Отправка не удалась');
+					console.log(err);
+				})
+				.then((res) => {
+					console.log(res);
+					alert('Заявка отправлена');
+				});
+		});
+	})
+
+	/*    /mail    */
+
 
 
 });

@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /*    /SLICK    */
 
-  /*    burger    */
+  /*    burger + card poup    */
 
   var html = document.getElementById('html');
   var burger = document.getElementById('burger');
@@ -127,17 +127,49 @@ document.addEventListener("DOMContentLoaded", function () {
       closeNavMob();
     });
   });
-  /*    /burger    */
+  var prodCard = document.getElementById('prodCard');
+  var closeProdCard = document.getElementById('closeProdCard');
+  var buyButtonNL = document.querySelectorAll('.prodslider__slider-btn');
+  var buyButtonList = Array.prototype.slice.call(buyButtonNL);
+
+  function closeProductCard() {
+    prodCard.classList.remove('active');
+    enableScroll();
+  }
+
+  function openProductCard() {
+    prodCard.classList.add('active');
+    disableScroll();
+  }
+
+  buyButtonList.forEach(function (btn) {
+    btn.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      openProductCard();
+    });
+  });
+  closeProdCard.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    closeProductCard();
+  });
+  /*    /burger + card poup   */
 
   /*    smooth scroll to element*/
 
-  document.querySelectorAll('a[href^="#"').forEach(function (link) {
+  var allLinkNL = document.querySelectorAll('a');
+  var allLinkList = Array.prototype.slice.call(allLinkNL);
+  var achorList = [];
+  allLinkList.forEach(function (anchor) {
+    var pattern = /^#/;
+    var href = anchor.getAttribute('href');
+    var test = pattern.exec(href);
+    if (test) achorList.push(anchor);
+  });
+  achorList.forEach(function (link) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       var href = this.getAttribute('href').substring(1);
       var scrollTarget = document.getElementById(href);
-      var topOffset = document.querySelector("#".concat(href)).offsetHeight; // const topOffset = 0; // если не нужен отступ сверху 
-
       var elementPosition = scrollTarget.getBoundingClientRect().top;
       var offsetPosition = elementPosition - 100;
       window.scrollBy({
@@ -199,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
     statusFaqAnim = true;
     setTimeout(function () {
       statusFaqAnim = false;
-    }, 20000);
+    }, 9000);
     var minSec = 100;
     var maxSec = 500;
     var circle = document.getElementById('circleNum');
@@ -231,14 +263,14 @@ document.addEventListener("DOMContentLoaded", function () {
       setCircleAnimStart();
       setTimeout(function () {
         resolve();
-      }, 4200);
+      }, 1000);
     });
     prom1.then(function () {
       $('#circleNum').offset($('#circleNum3').offset());
       setNumColor();
     });
     var nums = [num12, num22, num32];
-    var numsTimeout = [4000, 7000, 2000];
+    var numsTimeout = [2500, 3000, 1600];
 
     function setNumColor() {
       var start = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
@@ -313,39 +345,39 @@ document.addEventListener("DOMContentLoaded", function () {
           case 100:
           case 200:
           case 300:
-            bgAnim.style.transform = 'scale(1)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(1)'; // textClipColor.style.clipPath = `circle(74.5% at 0 ${animRadius}px)`;
+
             break;
 
           case 400:
-            bgAnim.style.transform = 'scale(2)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(2)'; // textClipColor.style.clipPath = `circle(1039.95px at 248.823px ${animRadius}px)`;
+
             break;
 
           case 500:
-            bgAnim.style.transform = 'scale(3)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(3)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+
             break;
 
           case 600:
-            bgAnim.style.transform = 'scale(4)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(4)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+
             break;
 
           case 700:
-            bgAnim.style.transform = 'scale(5)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(5)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+
             break;
 
           case 800:
-            bgAnim.style.transform = 'scale(6)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(6)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+
             break;
 
           case 900:
           default:
-            bgAnim.style.transform = 'scale(7)';
-            textClipColor.style.clipPath = "circle(".concat(animVw, "px at ").concat(animLeft, "px ").concat(animRadius, "px)");
+            bgAnim.style.transform = 'scale(7)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
+
             break;
         }
       }
@@ -408,4 +440,43 @@ document.addEventListener("DOMContentLoaded", function () {
   Visible(block);
   circleToNums(faq);
   /*    /ANIM BLOCK TO CIRCLE    */
+
+  /*    FOTORAMA    */
+
+  $('#promodalGallery').fotorama({
+    width: '100%',
+    maxwidth: '100%',
+    ratio: 16 / 9,
+    allowfullscreen: true,
+    nav: 'thumbs',
+    thumbmargin: 20,
+    swipe: true
+  });
+  /*    /FOTORAMA    */
+
+  /*    mail    */
+
+  var formNL = document.querySelectorAll('.same__form');
+  var formList = Array.prototype.slice.call(formNL);
+  formList.forEach(function (form) {
+    $(form).on("submit", function (ev) {
+      ev.preventDefault();
+      var sendBody = $(this).serialize();
+      console.log(sendBody);
+      fetch("./send.php", {
+        method: "POST",
+        body: sendBody,
+        headers: {
+          "content-type": "application/x-www-form-urlencoded"
+        }
+      })["catch"](function (err) {
+        alert('Отправка не удалась');
+        console.log(err);
+      }).then(function (res) {
+        console.log(res);
+        alert('Заявка отправлена');
+      });
+    });
+  });
+  /*    /mail    */
 });

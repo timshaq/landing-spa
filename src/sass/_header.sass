@@ -150,6 +150,7 @@
 		object-fit: cover
 	&__btn
 		width: 36%
+		padding: 18px 5px
 		& span
 			color: #FFFFFF
 		& img
@@ -175,16 +176,18 @@
 			& img
 				display: block
 	&__logo
-		width: 89px
-		height: 89px
-		object-fit: cover
 		position: absolute
 		bottom: 0
 		left: 50%
 		transform: translate(-50%, 35%)
+		& img
+			width: 89px
+			height: 89px
+			object-fit: cover
+			@media(max-width:767px)
+				width: 59px
+				height: 59px
 		@media(max-width:1240px)
 			bottom: -35px
 		@media(max-width:767px)
-			width: 59px
-			height: 59px
 			bottom: -6px

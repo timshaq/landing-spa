@@ -2,17 +2,31 @@
 <html lang="ru" id="html">
 <head>
 
-	<title>The Title</title>
+	<title>Verdana SPA — КУПИТЬ ГИДРОМАССАЖНЫЕ СПА БАССЕЙНЫ ПО ЛУЧШЕЙ ЦЕНЕ</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+	<!-- FAVICON -->
+	<link rel="apple-touch-icon" sizes="180x180" href="build/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="build/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="build/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="build/img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="build/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="theme-color" content="#ffffff">
+	<!-- /FAVICON -->
+
 	<link rel="stylesheet" href="build/css/style.min.css">
 
+	<link rel="stylesheet" href="build/lib/slick/slick.css">
+	<link rel="stylesheet" href="build/lib/slick/slick-theme.css">
+
+	<link rel="stylesheet" href="build/lib/fotorama/fotorama.css">
 
 	<script src="build/lib/jquery-3.5.1.min.js"></script>
 	<script src="build/lib/slick/slick.min.js"></script>
-	<link rel="stylesheet" href="build/lib/slick/slick.css">
-	<link rel="stylesheet" href="build/lib/slick/slick-theme.css">
+
+	<script src="build/lib/fotorama/fotorama.js"></script>
 
 	<script src="build/js/script.min.js"></script>
 
@@ -100,7 +114,9 @@
 			</button>
 
 		</div>
-		<img src="build/img/header__logo.png" alt="" class="header__logo">
+		<a href="#html" class="header__logo">
+			<img src="build/img/header__logo.png" alt="">
+		</a>
 	</div>
 </header>
 
@@ -687,9 +703,9 @@
 	<div class="examples__bganim" id="bgAnim"></div>
 		<h2 class="examples__title title_h2">
 			Примеры нашего оборудования
-			<div class="examples__title title_h2 examples__title_mask" aria-hidden="true" id="textClipColor">
-				Примеры нашего оборудования
-			</div>
+			<!-- <div class="examples__title title_h2 examples__title_mask" aria-hidden="true" id="textClipColor">
+				<span id="span1">Примеры нашего</span> <span id="span2">оборудования</span>
+			</div> -->
 		</h2>
 	<div class="fix-cont">
 
@@ -752,11 +768,11 @@
 			<div class="same__row">
 				
 				<label class="same__label">
-					<input type="text" class="same__input" name="name" placeholder="Введите имя">
+					<input type="text" class="same__input" name="name" placeholder="Введите имя" required>
 				</label>
 				
 				<label class="same__label">
-					<input type="text" class="same__input" name="tel" placeholder="Введите телефон">
+					<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
 				</label>
 
 				<button class="same__btn btn_blue2" type="submit" form="open-form">
@@ -771,6 +787,7 @@
 <div class="present">
 	<img src="build/img/present__bg.png" alt="" class="present__bg">
 	<div class="present__circle"></div>
+	<div class="present__circle2"></div>
 </div>
 
 <section class="brands">
@@ -907,7 +924,6 @@
 		<h2 class="reviews__title title_h2 fix-cont">
 			Отзывы
 		</h2>
-		<!-- <img src="build/img/review__bg.png" alt="" class="reviews__bg"> -->
 		<div class="reviews__bg">
 			<svg viewBox="0 0 1920 1130" xmlns="http://www.w3.org/2000/svg">
 
@@ -927,187 +943,6 @@
 
 
 		</div>
-		<!-- <div class="reviews__slider-cont">
-			<div class="reviews__slider fix-cont">
-
-				<div class="reviews__slider-item">
-
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								Instagram 25.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="reviews__slider-item">
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								Telegram 5.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большоесупер бассейн спасибо  большое супер бассейн спасибо большоесупер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				
-				<div class="reviews__slider-item">
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								Mail.ru 25.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				
-				<div class="reviews__slider-item">
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								What’s App 5.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="reviews__slider-item">
-
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								Instagram 25.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="reviews__slider-item">
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								Telegram 5.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большоесупер бассейн спасибо  большое супер бассейн спасибо большоесупер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				
-				<div class="reviews__slider-item">
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								Mail.ru 25.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-				</div>
-
-				
-				<div class="reviews__slider-item">
-					<div class="reviews__slider-card">
-
-						<div class="reviews__slider-row">
-							<h3 class="reviews__slider-title_h3">
-								Анна Бобенко
-							</h3>
-							<small class="reviews__slider-date">
-								What’s App 5.07.2020
-							</small>
-						</div>
-
-						<div class="reviews__slider-row">
-							<p class="reviews__slider-article">
-								Супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое супер бассейн спасибо большое
-							</p>
-						</div>
-
-					</div>
-
-				</div>
-				
-			</div>
-		</div> -->
 
 		<div class="reviews__slider-cont">
 			<div class="reviews__slider">
@@ -1367,11 +1202,11 @@
 			<div class="same__row">
 				
 				<label class="same__label">
-					<input type="text" class="same__input" name="name" placeholder="Введите имя">
+					<input type="text" class="same__input" name="name" placeholder="Введите имя" required>
 				</label>
 				
 				<label class="same__label">
-					<input type="text" class="same__input" name="tel" placeholder="Введите телефон">
+					<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
 				</label>
 
 				<button class="same__btn btn_blue2" type="submit" form="open-form2">
@@ -1632,7 +1467,7 @@
 <footer class="footer" id="map">
 
 		
-		<iframe class="footer__mapbg" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ca08e99e1dbd068bbf8aa43e9a7aa4c13e82b3b8d0d9fb9b31364459267a489&amp;source=constructor"  frameborder="0"></iframe>
+	<iframe class="footer__mapbg" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ca08e99e1dbd068bbf8aa43e9a7aa4c13e82b3b8d0d9fb9b31364459267a489&amp;source=constructor"  frameborder="0"></iframe>
 
 
 
@@ -1672,10 +1507,10 @@
 				</li>
 
 				<li class="footer__contacts-item">
-					<a class="footer__contact-link" href="https://yandex.ru/maps/-/CCQ3jHFM8C" target="_blank">
+					<a class="footer__contact-link" href="https://yandex.ru/maps/-/CCQ~M6DV1D" target="_blank">
 						<img src="build/img/footer__geo.png" alt="" class="footer__icon">
 						<span class="footer__text">
-							Адрес: г. Краснодар, ул. Строителей 5, оф 2
+							Адрес: г. Краснодар, 1й Лучистый проезд, 3, оф 1
 						</span>
 					</a>
 				</li>
@@ -1694,11 +1529,11 @@
 				<div class="same__row">
 					
 					<label class="same__label">
-						<input type="text" class="same__input" name="name" placeholder="Введите имя">
+						<input type="text" class="same__input" name="name" placeholder="Введите имя" required>
 					</label>
 					
 					<label class="same__label">
-						<input type="text" class="same__input" name="tel" placeholder="Введите телефон">
+						<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
 					</label>
 					
 					<label class="same__label">
@@ -1717,6 +1552,300 @@
 		</section>
 	</div>
 </footer>
+
+<section class="prodmodal" id="prodCard">
+	<div class="prodmodal__card">
+
+		<button type="button" class="prodmodal__close" id="closeProdCard">
+			<img src="build/img/close.png" alt="">
+		</button>
+		<h2 class="prodmodal__title">
+			BestSpas Amalia СПА Бассейн
+		</h2>
+
+		<div class="prodmodal__row">
+
+			<div class="prodmodal__col col-left gallery">
+
+				<div class="prodmodal__gallery" id="promodalGallery">
+					<img src="build/img/prodmodal__1.png" alt="">
+					<img src="build/img/prodmodal__2.png" alt="">
+					<img src="build/img/prodmodal__1.png" alt="">
+					<img src="build/img/prodmodal__2.png" alt="">
+					<img src="build/img/prodmodal__1.png" alt="">
+					<img src="build/img/prodmodal__2.png" alt="">
+				</div>
+			</div>
+
+			<div class="prodmodal__col col-right">
+
+				<ul class="prodmodal__options">
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Страна производитель:
+						</span>
+						<span class="prodmodal__options-descr">
+							Китай
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Артикул: 
+						</span>
+						<span class="prodmodal__options-descr">
+							Amaja
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Размер: 
+						</span>
+						<span class="prodmodal__options-descr">
+							186х166 см
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Высота:
+						</span>
+						<span class="prodmodal__options-descr">
+							82 см
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Цвет чаши:
+						</span>
+						<span class="prodmodal__options-descr">
+							жемчук
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Цвет обшивки: 
+						</span>
+						<span class="prodmodal__options-descr">
+							дерево
+						</span>
+					</li>
+
+				</ul>
+
+				<ul class="prodmodal__options">
+
+					<h3 class="prodmodal__subtitle">
+						Технические параметры оборудования
+					</h3>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Количество мест
+						</span>
+						<span class="prodmodal__options-descr">
+							5
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Количество терапевтических мест
+						</span>
+						<span class="prodmodal__options-descr">
+							3
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Количество форсунок 
+						</span>
+						<span class="prodmodal__options-descr">
+							14
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Емкость СПА бассейна, л 
+						</span>
+						<span class="prodmodal__options-descr">
+							800
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Вес без воды, кг
+						</span>
+						<span class="prodmodal__options-descr">
+							235
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Вес с наполнением воды, кг
+						</span>
+						<span class="prodmodal__options-descr">
+							1035
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Электрические требования 
+						</span>
+						<span class="prodmodal__options-descr">
+							16A
+						</span>
+					</li>
+
+				</ul>
+			</div>
+
+		</div>
+
+
+
+		<h3 class="prodmodal__subtitle">
+			Базовая комплектация
+		</h3>
+
+		<div class="prodmodal__row base">
+
+			<div class="prodmodal__col col-left base">
+
+				<ul class="prodmodal__options">
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Чаша спа бассейна акрил Aristech
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Термокрышка 9-12 см
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Водопровол Tuff flex
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Стерилизация воды озонатор 1х20W
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Панель управления Balboa Soft touch
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Нагреватель Balboa 3KW
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+				</ul>
+				
+			</div>
+
+
+			<div class="prodmodal__col col-right base">
+				<ul class="prodmodal__options">
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Гидромассажная помпа 1х2 HP
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Циркуляционная помпа 1х250W
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Поддон-основание из ABS пластика
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Фильтры очистки воды 2х50 sq.ft
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+					<li class="prodmodal__options-item">
+						<span class="prodmodal__options-name">
+							Изоляция периметра обрамления 2,5 см
+						</span>
+						<span class="prodmodal__options-descr">
+							Включено
+						</span>
+					</li>
+
+				</ul>
+				
+			</div>
+		</div>
+
+		<div class="prodmodal__row">
+			<button type="button" class="prodmodal__btn btn_blue2">
+				Купить
+			</button>
+		</div>
+
+
+		</div>
+
+	</div>
+</section>
 
 </body>
 
