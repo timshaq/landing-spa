@@ -1,0 +1,234 @@
+.prodslider
+	& *
+		z-index: 3
+	&.prodslider1
+		margin-top: 90px
+		padding-top: 50px
+		position: relative
+		& .prodslider__bg
+			width: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+			@media(max-width:1600px)
+				height: 100%
+				object-fit: cover
+	&.prodslider2
+		margin-top: 135px
+		position: relative
+		& .prodslider__bg-circle-blue
+			width: 390px
+			height: 390px
+			border-radius: 50%
+			background-color: #3a84e2
+			position: absolute
+			top: 140px
+			right: 0
+			z-index: 0
+			animation: scalebezier 20s infinite linear
+			@media(max-width:1366px)
+				right: -5vw
+			@media(max-width:449px)
+				display: none
+	&.prodslider3
+		margin-top: 140px
+		position: relative
+		& .prodslider__bg
+			width: 100%
+			position: absolute
+			top: -200px
+			left: 0
+			z-index: 0
+			@media(max-width:1600px)
+				height: 100%
+				object-fit: cover
+	&.prodslider4
+		margin-top: 135px
+		position: relative
+		& .prodslider__bg-circle-blue
+			width: 250px
+			height: 250px
+			border-radius: 50%
+			background-color: #3a84e2
+			position: absolute
+			top: -50px
+			left: -200px
+			z-index: 0
+			animation: scalebezier 20s infinite linear
+			@media(max-width:1366px)
+				left: -25vw
+			@media(max-width:992px)
+				left: -36vw
+			@media(max-width:449px)
+				display: none
+	&__title
+		font-weight: 600
+		line-height: 48px
+		padding-left: 100px
+		position: relative
+		@media(max-width:449px)
+			padding-left: 20px
+		&:before
+			content: ''
+			left: 0
+			top: 50%
+			position: absolute
+			transform: translateY(-50%)
+			border-radius: 25px
+			width: 73px
+			height: 15px
+			background-color: #3a84e2
+			@media(max-width:449px)
+				top: 0
+				transform: translateY(0)
+				width: 10px
+				height: 100%
+	&__slider
+		display: flex
+		justify-content: space-between
+		margin: 80px 0 100px 0
+	&__slider-item
+		width: 455px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		position: relative
+		&:hover
+			& .prodslider__slider-mask
+				height: 100%
+				transition: height ease .5s
+			& .prodslider__slider-eyecont
+				opacity: 1
+				visibility: visible
+				transition: all ease .7s
+			& .prodslider__slider-price
+				left: 50%
+				transform: translateX(-50%)
+				transition: all ease .7s
+			& .prodslider__slider-btn
+				left: 50%
+				transform: translateX(-50%)
+				transition: all ease .7s
+				&:hover
+					background: #3883E2
+					border: 1px solid #3883E2
+					color: #FFFFFF
+			& .prodslider__slider-ph
+				transform: scale(1.1)
+				transition: transform ease .7s
+				@media(max-width:449px)
+					transform: scale(1)
+		& .prodslider__slider-mask
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			border: 1px solid #b2b2b2
+			width: 100%
+			height: 380px
+			padding-top: 105px 
+			padding-bottom: 45px
+			transition: height ease .5s
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			background: #FFFFFF
+		& .prodslider__slider-eyecont
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 195px
+			width: 78px
+			height: 78px
+			border-radius: 50%
+			background: #FFFFFF
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			opacity: 0
+			visibility: hidden
+			z-index: 4
+			transition: all ease .5s
+		& .prodslider__slider-phcont
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			padding-top: 105px 
+			padding-bottom: 45px
+		& .prodslider__slider-ph
+			width: 320px
+			height: 230px
+			object-fit: contain
+			transform: scale(1)
+			transition: transform ease .5s
+		& .prodslider__slider-row
+			padding-top: 50px
+			padding-bottom: 35px
+		& .prodslider__slider-title
+			font-weight: 600
+			line-height: 36px
+			text-align: center
+			position: relative
+		& .prodslider__slider-price
+			width: fit-content
+			line-height: 31px
+			margin-top: 25px
+			margin-bottom: 30px
+			position: relative
+			left: 0
+			transform: translateX(0)
+			transition: all ease .5s
+			&:before
+				content: '₽'
+			@media(max-width:449px)
+				left: 50%
+				transform: translateX(-50%)
+				transition: all ease .7s
+		& .prodslider__slider-btn
+			line-height: 19px
+			border-radius: 25px
+			border: 1px solid #000000
+			padding: 15px 75px
+			position: relative
+			left: 0
+			transform: translateX(0)
+			transition: all ease .5s
+			@media(max-width:449px)
+				left: 50%
+				transform: translateX(-50%)
+	&__row
+		display: flex
+		justify-content: center
+		& .prodslider__btn
+			line-height: 19px
+			border-radius: 25px
+			color: #4086DF
+			border: 1px solid #3A84E2
+			padding: 15px 60px
+			transition: all ease .5s
+			&:hover
+				background: #3883E2
+				color: #FFFFFF
+				transition: all ease .5s
+
+
+
+
+@keyframes scalebezier
+	0% 
+		transform: scale(1) translate(50%,-100%)
+
+	25%
+		transform: scale(1.2) translate(45%,-100%)
+
+	50%
+		transform: scale(1.1) translate(50%,-100%)
+
+	75%
+		transform: scale(1.2) translate(55%,-100%)
+
+	100%
+		transform: scale(1) translate(50%,-100%)

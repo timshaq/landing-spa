@@ -1,0 +1,190 @@
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background-color: rgba(255,255,255,.7)
+	transition: background-color ease 1s
+	z-index: 10
+	&.active
+		background-color: rgba(255,255,255,1)
+	&__burger
+		width: 45px
+		height: 25px
+		display: none
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		@media(max-width:1240px)
+			display: flex
+	& .burger__item
+			width: 100%
+			height: 3px
+			background-color: #3883e2
+	&__fix-cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 15px
+		padding-bottom: 15px
+		@media(max-width:1600px)
+			max-width: none
+	&__col
+		width: 41%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media(max-width:1600px)
+			width: 45%
+		@media(max-width:1240px)
+			width: 90%
+		@media(max-width:515px)
+			width: 75%
+	&__col-nav
+		@media(max-width:1240px)
+			width: 10%
+		@media(max-width:515px)
+			width: 45px
+	&__navlist
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@media(max-width:1240px)
+			// opacity: 0
+			// visibility: hidden
+			position: fixed
+			top: 83px
+			left: 0
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
+			width: 100%
+			height: 100%
+			background-color: #FFFFFF
+			padding: 100px 80px
+			transform: translate(-120%,0)
+			transition: all ease .5s
+		@media(max-width:515px)
+			top: 80px
+		& .header__close-burger
+			display: none
+			position: absolute
+			right: 20px
+			top: 20px
+		&.active
+			opacity: 1
+			visibility: visible
+			transform: translate(0,0)
+			transition: all ease 1s
+			overflow-y: auto
+			& .header__close-burger
+				display: block
+			& .header__navlist-item
+				margin: 20px 0
+			& .header__navlink
+				font-size: 40px
+				@media(max-width:515px)
+					font-size: 20px
+			& .header__navlink-mob
+				font-size: 40px
+				@media(max-width:515px)
+					font-size: 20px
+				& img
+					width: 60px
+					height: 60px
+					@media(max-width:515px)
+						width: 40px
+						height: 40px
+	&__navlist-item
+		&.mob
+			display: none
+			@media(max-width:767px)
+				display: block
+	&__navlink
+		line-height: 20px
+		position: relative
+		transition: color ease .5s
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 2px
+			background: #0868ac
+			left: 0
+			bottom: 0
+			transition: .5s
+			transform: scale(0)
+			transform-origin: left
+		&:hover
+			color: #3b81e3
+		&:hover:before
+			transform: scale(1)
+		@media(max-width:515px)
+			width: 70%
+	&__col20
+
+	&__contlink
+		line-height: 20px
+		@media(max-width:1240px)
+			width: 25%
+			display: flex
+			justify-content: center
+			font-size: 20px
+		@media(max-width:900px)
+			width: 20%
+			font-size: 16px
+		@media(max-width:767px)
+			width: 45%
+			font-size: 24px
+			&:nth-child(1)
+				display: none
+			&:nth-child(3)
+				display: none
+		@media(max-width:515px)
+			font-size: 16px
+			width: 70%
+	&__phlink
+		width: 32px
+		height: 32px
+		object-fit: cover
+	&__btn
+		width: 36%
+		& span
+			color: #FFFFFF
+		& img
+			display: none
+		@media(max-width:1240px)
+			width: 25%
+		@media(max-width:900px)
+			width: 40%
+			font-size: 16px
+		@media(max-width:767px)
+			width: 45%
+		@media(max-width:515px)
+			padding: 0
+			font-size: 16px
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			& span
+				display: none
+			& img
+				display: block
+	&__logo
+		width: 89px
+		height: 89px
+		object-fit: cover
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate(-50%, 35%)
+		@media(max-width:1240px)
+			bottom: -35px
+		@media(max-width:767px)
+			width: 59px
+			height: 59px
+			bottom: -6px

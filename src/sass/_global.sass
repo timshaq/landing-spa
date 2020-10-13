@@ -4,7 +4,7 @@
 	padding: 0
 	margin: 0
 	border: 0
-	font-family: 'Corbel'
+	font-family: 'Myriad Pro', Arial, Helvetica, sans-serif
 *, *:before,*:after
 	-moz-box-sizing: border-box
 	-webkit-box-sizing: border-box
@@ -50,9 +50,25 @@ h1,h2,h3,h4,h5,h6
 
 
 /*    <GLOBAL>    */
-
-.fix-container 
-	max-width: 1040px
+html, body
+	background-color: #f7f7f7
+*
+	color: #222222
+.btn_blue
+	background: #3883E2
+	color: #FFFFFF
+	border-radius: 25px
+	padding: 18px 30px
+.btn_blue2
+	background: #3883E2
+	color: #FFFFFF
+.title_h2
+	font-size: 40px
+	line-height: 48px
+	text-align: center
+	font-weight: 600
+.fix-cont 
+	max-width: 1640px
 	min-width: 320px
 	margin: 0 auto
 	height: 100%
@@ -61,28 +77,76 @@ h1,h2,h3,h4,h5,h6
 	padding-right: 15px
 
 
-@media(max-width:1440px) 
-	.fix-container 
+@media(max-width:1600px)
+	.fix-cont 
 		max-width: 1140px
-	
-
 
 @media(max-width:1200px) 
-	.fix-container 
+	.fix-cont 
 		max-width: 970px
-	
-
 
 @media(max-width:992px) 
-	.fix-container 
+	.fix-cont 
 		max-width: 750px
-	
-
 
 @media(max-width:767px) 
-	.fix-container 
+	.fix-cont 
 		max-width: none
-	
-
+	.title_h2
+		font-size: 30px
+@media(max-width:500px) 
+	.fix-cont 
+		max-width: none
+	.title_h2
+		font-size: 20px
 
 /*    </GLOBAL>    */
+
+/*    FONT SIZE    */
+
+.header__navlink, .header__contlink,
+.faq__article, .sentprod__map-city,
+.prodslider__slider-btn, .prodslider__btn,
+.reviews__slider-date, .reviews__slider-article,
+.btn_blue, .btn_blue2
+	font-size: 20px
+	@media(max-width:1600px)
+		font-size: 16px
+
+.advant__list-item, .footer__text,
+.reviews__slider-title_h3, .same__subtitle,
+.same__input, .same__input::placeholder,
+.sentprod__article
+	font-size: 25px
+	@media(max-width:1640px)
+		font-size: 20px
+	@media(max-width:500px)
+		font-size: 16px
+
+.prodslider__slider-price
+	font-size: 26px
+	@media(max-width:1600px)
+		font-size: 22px
+
+.faq__title_h3, .preview__title_h2,
+.preview__title_h3, .preview__title_h4,
+.prodslider__slider-title
+	font-size: 30px
+	@media(max-width:1600px)
+		font-size: 26px
+	@media(max-width:500px)
+		font-size: 18px
+
+.preview__title_h1, .prodslider__title
+	font-size: 40px
+	@media(max-width:1600px)
+		font-size: 35px
+	@media(max-width:500px)
+		font-size: 26px
+
+.faq__number_absolute
+	font-size: 290px
+	@media(max-width:1024px)
+		font-size: 200px
+
+/*    /FONT SIZE    */

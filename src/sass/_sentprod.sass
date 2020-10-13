@@ -1,0 +1,324 @@
+.sentprod
+	margin-top: 175px
+	&__fix-cont
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+	&__title
+
+	&__article
+		line-height: 30px
+		text-align: center
+		padding: 0 15%
+		margin: 55px 0 60px
+		@media(max-width:1600px)
+			padding: 0 10%
+		@media(max-width:992px)
+			padding: 0
+	&__map
+		position: relative
+		@media(max-width:776px)
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+	&__map-ph
+		@media(max-width:776px)
+			display: none
+	&__map-ph_mob
+		display: none
+		@media(max-width:776px)
+			display: block
+			margin-bottom: 20px
+	&__map-item
+		position: absolute
+		transform: translate(-50%,-50%)
+		&.btn
+			display: none
+			@media(max-width: 776px)
+				display: block
+				font-size: 20px
+
+		&.hidden
+			@media(max-width:776px)
+				display: none
+				z-index: -1
+				opacity: 0
+				visibility: hidden
+				transform: translateY(-120%)
+				transition: all ease .5s
+			&.visible
+				display: block
+			&.active
+				z-index: 0
+				opacity: 1
+				visibility: visible
+				transform: translateY(0)
+				transition: all ease 1s
+
+		@media(max-width:776px)
+			position: static
+			width: 100%
+			transform: translate(0,0)
+			margin: 10px 0
+		&.moscow
+			top: 278px
+			left: 270px
+			@media(max-width:1600px)
+				top: 235px
+				left: 230px
+			@media(max-width:1200px)
+				top: 200px
+				left: 195px
+			@media(max-width:992px)
+				top: 154px
+				left: 150px
+		&.bryansk
+			top: 250px
+			left: 85px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 212px
+				left: 72px
+			@media(max-width:1200px)
+				top: 180px
+				left: 60px
+			@media(max-width:992px)
+				top: 137px
+				left: 47px
+		&.tula
+			top: 323px
+			left: 207px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 273px
+				left: 177px
+			@media(max-width:1200px)
+				top: 231px
+				left: 150px
+			@media(max-width:992px)
+				top: 175px
+				left: 114px
+		&.lipeck
+			top: 400px
+			left: 152px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 337px
+				left: 130px
+			@media(max-width:1200px)
+				top: 285px
+				left: 110px
+			@media(max-width:992px)
+				top: 84px
+				left: 217px
+		&.saransk
+			top: 421px
+			left: 280px
+			@media(max-width:1600px)
+				top: 353px
+				left: 236px
+			@media(max-width:1200px)
+				top: 300px
+				left: 200px
+			@media(max-width:992px)
+				top: 230px
+				left: 152px
+		&.kazan
+			top: 390px
+			left: 380px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 328px
+				left: 320px
+			@media(max-width:1200px)
+				top: 280px
+				left: 270px
+			@media(max-width:992px)
+				top: 215px
+				left: 207px
+		&.saratov
+			top: 547px
+			left: 304px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 460px
+				left: 256px
+			@media(max-width:1200px)
+				top: 390px
+				left: 215px
+			@media(max-width:992px)
+				top: 298px
+				left: 166px
+		&.ufa
+			top: 470px
+			left: 430px
+			@media(max-width:1600px)
+				top: 395px
+				left: 365px
+			@media(max-width:1200px)
+				top: 335px
+				left: 308px
+			@media(max-width:992px)
+				top: 257px
+				left: 235px
+		&.igevsk
+			top: 340px
+			left: 454px
+			@media(max-width:1600px)
+				top: 287px
+				left: 383px
+			@media(max-width:1200px)
+				top: 245px
+				left: 325px
+			@media(max-width:992px)
+				top: 148px
+				left: 250px
+		&.orenburg
+			top: 680px
+			left: 475px
+			@media(max-width:1600px)
+				top: 572px
+				left: 400px
+			@media(max-width:1200px)
+				top: 485px
+				left: 340px
+			@media(max-width:992px)
+				top: 370px
+				left: 260px
+		&.tomsk
+			top: 490px
+			left: 660px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 410px
+				left: 557px
+			@media(max-width:1200px)
+				top: 350px
+				left: 470px
+			@media(max-width:992px)
+				top: 260px
+				left: 360px
+		&.krasnoyarsk
+			top: 530px
+			left: 725px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 444px
+				left: 608px
+			@media(max-width:1200px)
+				top: 375px
+				left: 515px
+			@media(max-width:992px)
+				top: 290px
+				left: 395px
+		&.tura
+			top: 410px
+			left: 765px
+			@media(max-width:1600px)
+				top: 342px
+				left: 643px
+			@media(max-width:1200px)
+				top: 290px
+				left: 545px
+			@media(max-width:992px)
+				top: 222px
+				left: 415px
+		&.dudinka
+			top: 350px
+			left: 705px
+			& .sentprod__map-circle
+				width: 20px
+				height: 20px
+			@media(max-width:1600px)
+				top: 295px
+				left: 593px
+			@media(max-width:1200px)
+				top: 250px
+				left: 500px
+			@media(max-width:992px)
+				top: 192px
+				left: 385px
+		&.blagovesh
+			top: 555px
+			left: 1050px
+			@media(max-width:1600px)
+				top: 470px
+				left: 885px
+			@media(max-width:1200px)
+				top: 395px
+				left: 743px
+			@media(max-width:992px)
+				top: 300px
+				left: 570px
+		&.biblino
+			top: 190px
+			left: 1055px
+			@media(max-width:1600px)
+				top: 163px
+				left: 887px
+			@media(max-width:1200px)
+				top: 135px
+				left: 750px
+			@media(max-width:992px)
+				top: 105px
+				left: 575px
+		& .sentprod__map-circle
+			width: 45px
+			height: 45px
+			border-radius: 50%
+			background-color: #FFF
+			transform: scale(1)
+			transition: all ease .5s
+			@media(max-width:776px)
+				display: none
+		& .sentprod__map-city
+			background: #F2F2F2
+			box-shadow: -0.4px 3px 13px rgba(28, 28, 28, 0.42)
+			line-height: 23px
+			text-align: center
+			padding: 5px 17px
+			border-radius: 5px
+			position: absolute
+			left: 50%
+			top: -50px
+			transform: translate(-50%,-50%)
+			opacity: 0
+			visibility: hidden
+			transition: all ease .5s
+			& .sentprod__map-cityname
+			& .sentprod__mapcitynum
+			@media(max-width:776px)
+				opacity: 1
+				visibility: visible
+				position: static
+				transform: translate(0,0)
+		&:hover
+			& .sentprod__map-city
+				opacity: 1
+				visibility: visible
+				transition: all ease .7s
+			& .sentprod__map-circle
+				transform: scale(1.3)
+				transition: all ease .7s
+
+.fix-cont
+
+.title
+	&_h2
+

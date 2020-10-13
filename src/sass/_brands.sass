@@ -1,0 +1,32 @@
+.brands
+	margin-bottom: 90px
+	&__title
+
+	&__slider
+		display: flex
+		justify-content: space-between
+		margin-top: 90px
+	&__slider-item
+		position: relative
+		&:hover
+			& .blur
+				opacity: 0
+				visibility: hidden
+			& .hover
+				opacity: 1
+	&__slider-ph
+		height: 50px
+		width: auto
+		object-fit: contain
+		&.blur
+			position: relative
+			opacity: 1
+			visibility: visible
+			transition: all ease .5s
+		&.hover
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			opacity: 0
+			transition: all ease 1s

@@ -1,0 +1,160 @@
+.footer
+	padding-bottom: 150px
+	padding-top: 80px
+	margin-top: 150px
+	background: url('../img/footer__map.png')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	min-height: 1082px
+	position: relative
+	@media(max-width:1024px)
+		min-height: 1160px
+	@media(max-width:992px)
+		min-height: none
+		height: auto
+		padding-bottom: 40px
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		background: rgba(56, 131, 226,.3)
+	&__mapbg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		filter: grayscale(1)
+		pointer-events: none
+		&.active
+			filter: none
+			pointer-events: all
+		@media(max-width:992px)
+			margin-top: 40px
+			position: static
+			order: 2
+			width: 100%
+			height: 600px
+			padding: 0 15px
+			max-width: 750px
+		@media(max-width:767px) 
+			max-width: none
+	&__content
+		position: absolute
+		top: 84px
+		left: 157px
+		width: 870px
+		z-index: 3
+		@media(max-width:1600px)
+			left: 20px
+		@media(max-width:1440px)
+			width: 700px
+		@media(max-width:1024px)
+			width: 500px
+		@media(max-width:992px)
+			position: static
+			order: 1
+			width: 100%
+			padding: 0 15px
+			max-width: 750px
+		@media(max-width:767px) 
+			max-width: none
+	&__row
+		width: 100%
+		background: #FFFFFF
+		padding: 70px 65px 80px
+		&:nth-child(2n)
+			margin-top: 25px
+		@media(max-width:992px)
+			width: 100%
+		@media(max-width:500px)
+			padding: 55px 35px
+		&.footer__form
+			padding: 55px 35px 60px
+			& .same__row
+				justify-content: center
+				width: 100%
+				@media(max-width:1024px)
+					flex-wrap: wrap
+				@media(max-width:992px)
+					flex-direction: row
+				@media(max-width:767px)
+					flex-direction: column
+			& .same__subtitle
+				padding: 45px 112px 35px
+				@media(max-width:1200px)
+					padding: 45px 60px 35px
+				@media(max-width:1024px)
+					padding: 45px 0 35px
+				@media(max-width:500px)
+					padding: 20px 0
+			& .same__form
+				width: 100%
+			& .same__label
+				width: 30%
+				&:nth-child(2)
+					margin: 0 20px
+					@media(max-width:992px)
+						margin: 15px 0
+				@media(max-width:1024px)
+					width: 50%
+					margin: 15px 0
+				@media(max-width:992px)
+					width: 80%
+					margin: 15px 0
+				@media(max-width:500px)
+					width: 100%
+			& .same__input
+				width: 100%
+				padding: 13px
+				border: 1px solid #000
+			& .same__btn
+				width: 30%
+				margin-top: 20px
+				@media(max-width:1024px)
+					width: 50%
+					margin-top: 15px
+				@media(max-width:992px)
+					width: 80%
+				@media(max-width:500px)
+					width: 100%
+	&__title
+		margin-bottom: 30px
+		&_left
+			text-align: left
+	&__contacts
+
+	&__contacts-item
+		margin-bottom: 10px
+
+	&__contact-link
+
+	&__icon
+
+	&__text
+		line-height: 30px
+		margin-left: 15px
+.fix-cont
+
+.title
+	&_h2
+
+.same
+	&__form
+
+	&__title
+
+	&__subtitle
+
+	&__row
+
+	&__label
+
+	&__input
+
+	&__btn
+
+.btn
+	&_blue
+

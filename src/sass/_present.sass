@@ -1,0 +1,27 @@
+.present
+	position: relative
+	&__bg
+		position: relative
+		top: -90px
+		z-index: 0
+		@media(max-width: 992px)
+			top: -15px
+		@media(max-width: 776px)
+			top: -56px
+		@media(max-width: 375px)
+			height: 350px
+			object-fit: cover
+	&__circle
+		width: 250px
+		height: 250px
+		border-radius: 50%
+		background-color: #3a84e2
+		position: absolute
+		bottom: -10px
+		right: 2vw
+		z-index: 0
+		@media(max-width: 1200px)
+			width: 150px
+			height: 150px
+		@media(max-width: 992px)
+			display: none

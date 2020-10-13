@@ -1,0 +1,175 @@
+.preview
+	position: relative
+	z-index: 5
+	& *
+		z-index: 5
+	&__circle
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		background-color: #FFFFFF
+		position: absolute
+		top: 595px
+		left: 5px
+		transform: translate(-50%,-50%)
+		z-index: 0
+		@media(max-width:500px)
+			display: none
+	&__circles
+		width: 165px
+		height: 165px
+		border-radius: 50%
+		background: #3a84e2
+		position: absolute
+		top: 640px
+		right: 300px
+		animation: loop 9s infinite linear
+		z-index: 0
+		&:before
+			content: ''
+			width: 36%
+			height: 36%
+			border-radius: 50%
+			background: #ffffff
+			position: absolute
+			top: 0
+			left: 0
+			transform: translate(-50%, 0)
+		@media(max-width:1600px)
+			right: 15vw
+		@media(max-width:992px)
+			right: 8vw
+			top: 600px
+		@media(max-width:767px)
+			right: -6vw
+			top: 800px
+		@media(max-width:500px)
+			right: -25vw
+			top: 1000px
+	&__row
+		padding: 240px 0 375px 0
+		background: url('../img/preview__bg.png')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: top center
+		& .fix-cont
+			display: flex
+			justify-content: space-between
+			@media(max-width:767px)
+				flex-direction: column
+				align-items: center
+	&__text
+		order: 2
+		width: 55%
+		@media(max-width:767px)
+			order: 1
+			width: 100%
+	&__title
+		&_h1
+			font-weight: bold
+			line-height: 48px
+			text-align: right
+			color: #FFFFFF
+			text-transform: uppercase
+			@media(max-width:1200px)
+				text-shadow: 5px 5px 9px black
+			@media(max-width:500px)
+				text-align: center
+				background: rgba(56, 131, 226, 0.7)
+				padding: 30px 10px 0 
+		&_h2
+			font-weight: 600
+			line-height: 36px
+			text-align: right
+			color: #FFFFFF
+			margin-top: 65px
+			@media(max-width:1600px)
+				margin-top: 30px
+			@media(max-width:1200px)
+				text-shadow: 5px 5px 9px black
+			@media(max-width:500px)
+				text-align: center
+				background: rgba(56, 131, 226, 0.7)
+				padding: 0 10px 30px 
+				margin-top: 0
+		&_h3
+			line-height: 30px
+			font-weight: 600
+		&_h4
+			font-weight: 600
+			line-height: 36px
+			text-align: center
+			margin-bottom: 70px
+	&__card-quest
+		order: 1
+		width: 32%
+		background: rgba(255, 255, 255, .65)
+		padding: 65px 45px
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		@media(max-width:1200px)
+		    width: 43%
+		@media(max-width:992px)
+		    padding: 30px 25px
+		@media(max-width:767px)
+			width: 80%
+			margin-top: 40px
+			padding: 65px 45px
+		@media(max-width:500px)
+			width: 100%
+			margin-top: 40px
+			padding: 30px 30px
+			text-align: center
+	&__btn-quiz
+		margin-top: 90px
+		width: 70%
+		@media(max-width:1600px)
+			margin-top: 30px
+	&__products
+		display: flex
+		justify-content: space-between
+		width: 100%
+		padding-top: 70px
+		@media(max-width:1024px)
+			flex-wrap: wrap
+		@media(max-width:767px)
+			flex-direction: column
+	&__products-item
+		width: 18%
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		transform: scale(1)
+		transition: transform ease .5s
+		&:hover
+			transform: scale(1.1)
+			transition: transform ease 1s
+		@media(max-width:1024px)
+			width: 50%
+			margin-top: 50px
+			&:nth-child(1)
+				margin-top: 0
+			&:nth-child(2)
+				margin-top: 0
+		@media(max-width:767px)
+			width: 100%
+			margin-top: 50px
+			&:nth-child(1)
+				margin-top: 0
+	&__product-anchor
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+	&__product-ph
+@keyframes loop
+	0% 
+		transform: rotate(0deg)
+
+	100%
+		transform: rotate(360deg)
