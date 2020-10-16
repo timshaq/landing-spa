@@ -1,482 +1,498 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
-  var header = document.getElementById('header');
-  var topY = window.scrollY;
-  if (topY >= 100) header.classList.add('fix');
-  if (topY < 100) header.classList.remove('fix');
-  window.addEventListener('scroll', function (ev) {
-    topY = window.scrollY;
-    if (topY >= 100) header.classList.add('active');
-    if (topY < 100) header.classList.remove('active');
-  });
-  /*    SLICK    */
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-  var prodsliders = $('.prodslider').find('.prodslider__slider');
+!function (e) {
+  var t = {};
 
-  for (var i = 0; i <= prodsliders.length; i++) {
-    $(prodsliders[i]).slick({
-      infinite: false,
-      slidesToShow: 3,
+  function n(o) {
+    if (t[o]) return t[o].exports;
+    var l = t[o] = {
+      i: o,
+      l: !1,
+      exports: {}
+    };
+    return e[o].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
+  }
+
+  n.m = e, n.c = t, n.d = function (e, t, o) {
+    n.o(e, t) || Object.defineProperty(e, t, {
+      enumerable: !0,
+      get: o
+    });
+  }, n.r = function (e) {
+    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+      value: "Module"
+    }), Object.defineProperty(e, "__esModule", {
+      value: !0
+    });
+  }, n.t = function (e, t) {
+    if (1 & t && (e = n(e)), 8 & t) return e;
+    if (4 & t && "object" == _typeof(e) && e && e.__esModule) return e;
+    var o = Object.create(null);
+    if (n.r(o), Object.defineProperty(o, "default", {
+      enumerable: !0,
+      value: e
+    }), 2 & t && "string" != typeof e) for (var l in e) {
+      n.d(o, l, function (t) {
+        return e[t];
+      }.bind(null, l));
+    }
+    return o;
+  }, n.n = function (e) {
+    var t = e && e.__esModule ? function () {
+      return e["default"];
+    } : function () {
+      return e;
+    };
+    return n.d(t, "a", t), t;
+  }, n.o = function (e, t) {
+    return Object.prototype.hasOwnProperty.call(e, t);
+  }, n.p = "", n(n.s = 9);
+}([function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e = !1;
+
+    function t() {
+      e = !0, setTimeout(function () {
+        e = !1;
+      }, 9e3);
+      var t = document.getElementById("circleNum"),
+          n = t.style.top,
+          o = t.style.left,
+          l = document.getElementById("circleNum1"),
+          i = document.getElementById("circleNum12"),
+          r = (document.getElementById("circleNum2"), document.getElementById("circleNum22")),
+          c = (document.getElementById("circleNum3"), document.getElementById("circleNum32"));
+      t.getBoundingClientRect(), l.getBoundingClientRect();
+
+      function a() {
+        t.style.transition = "all linear 1s", t.classList.remove("active"), t.style.left = o, t.style.top = n;
+      }
+
+      new Promise(function (e) {
+        !function () {
+          t.classList.add("active");
+          var e = $("#circleNum1").offset();
+          $("#circleNum").css("left", "".concat(e.left, "px"));
+        }(), setTimeout(function () {
+          e();
+        }, 1e3);
+      }).then(function () {
+        $("#circleNum").offset($("#circleNum3").offset()), function e() {
+          var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+          if (t === s.length) return a(), void (s[t - 1].style.clip = "rect(0px, 150px, 0px, 0px)");
+          0 != t && (s[t - 1].style.clip = "rect(0px, 150px, 0px, 0px)");
+          var n = s[t];
+          n.classList.add("active"), n.style.clip = "rect(0px, 150px, 300px, 0px)", setTimeout(function () {
+            n.classList.remove("active"), t++, e(t);
+          }, d[t]);
+        }();
+      });
+      var s = [i, r, c],
+          d = [2500, 3e3, 1600];
+    }
+
+    var n = document.getElementById("case"),
+        o = function o(e) {
+      var t = {
+        top: window.pageYOffset + e.getBoundingClientRect().top,
+        left: window.pageXOffset + e.getBoundingClientRect().left,
+        right: window.pageXOffset + e.getBoundingClientRect().right,
+        bottom: window.pageYOffset + e.getBoundingClientRect().bottom
+      },
+          n = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
+      t.top, e.offsetHeight;
+
+      function o() {
+        var e = document.getElementById("bgAnim");
+        document.getElementById("textClipColor");
+
+        function o(t) {
+          e.getBoundingClientRect().left, e.getBoundingClientRect().width;
+
+          if (600 === window.innerWidth && 125, !(window.innerWidth < 600)) {
+            switch (t = 100 * Math.round(t / 100)) {
+              case 0:
+              case 100:
+              case 200:
+              case 300:
+                e.style.transform = "scale(1)";
+                break;
+
+              case 400:
+                e.style.transform = "scale(2)";
+                break;
+
+              case 500:
+                e.style.transform = "scale(3)";
+                break;
+
+              case 600:
+                e.style.transform = "scale(4)";
+                break;
+
+              case 700:
+                e.style.transform = "scale(5)";
+                break;
+
+              case 800:
+                e.style.transform = "scale(6)";
+                break;
+
+              case 900:
+              default:
+                e.style.transform = "scale(7)";
+            }
+          }
+        }
+
+        t.top < n.top ? o(n.top - t.top) : o(t.top - n.top);
+      }
+
+      t.bottom > n.top && t.top < n.bottom && o();
+    },
+        l = document.getElementById("faq"),
+        i = function i(n) {
+      var o = window.pageYOffset + n.getBoundingClientRect().top,
+          l = window.pageYOffset + n.getBoundingClientRect().bottom,
+          i = window.pageYOffset,
+          r = window.pageYOffset + document.documentElement.clientHeight;
+      n.offsetHeight;
+      l > i && o < r && window.innerWidth > 1024 && !e && t();
+    };
+
+    window.addEventListener("scroll", function () {
+      o(n), i(l);
+    }), o(n), i(l);
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e = {},
+        t = document.querySelectorAll('input[name="email"]');
+    Array.prototype.slice.call(t).forEach(function (t) {
+      Inputmask({
+        mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]"
+      }).mask(t);
+
+      var n = t.parentElement,
+          o = function o() {
+        n.classList.remove("valid"), n.classList.remove("invalid");
+      };
+
+      t.addEventListener("blur", function () {
+        o(), t.value.trim() && (!function (e) {
+          return /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/gim.test(e);
+        }(t.value) ? (n.classList.add("invalid"), e[t] = !1) : (n.classList.add("valid"), e[t] = !0));
+      }), t.addEventListener("change", o), t.addEventListener("keyup", o);
+    });
+    var n = {},
+        o = document.querySelectorAll('input[name="tel"]');
+    Array.prototype.slice.call(o).forEach(function (e) {
+      Inputmask({
+        mask: "+99999999999[9][9][9][9]"
+      }).mask(e);
+
+      var t = window.intlTelInput(e, {
+        utilsScript: "./build/lib/mask/js/utils.js",
+        preferredCountries: ["ru", "ua"]
+      }),
+          o = e.parentElement.parentElement,
+          l = function l() {
+        console.log(t), o.classList.remove("valid"), o.classList.remove("invalid");
+      };
+
+      e.addEventListener("blur", function () {
+        l();
+        if (e.value.trim()) if (t.isValidNumber()) o.classList.add("valid"), n[e] = !0;else {
+          t.getValidationError();
+          o.classList.add("invalid"), n[e] = !1;
+        }
+      }), e.addEventListener("change", l), e.addEventListener("keyup", l);
+    });
+    document.getElementById("open-form"), document.getElementById("open-form2"), document.getElementById("open-form5"), document.getElementById("open-form3"), document.getElementById("open-form4"), document.getElementById("open-form6");
+    var l = document.querySelectorAll(".same__form");
+    Array.prototype.slice.call(l).forEach(function (t) {
+      $(t).on("submit", function (o) {
+        o.preventDefault();
+        var l = this.querySelector('input[name="tel"]'),
+            i = (this.querySelector('button[type="submit"]'), this.querySelector('input[name="tel"]'));
+        if (i) e[i];
+        if (!n[l] || !i) return alert("Некорректно заполнены поля");
+        var r = $(this).attr("data-block"),
+            c = $(this).serialize();
+        r ? (c += "&block=".concat(r), console.log("block"), console.log(r)) : (r = localStorage.getItem("blockNameForSend"), c += "&block=".concat(r), console.log("block"), console.log(r)), console.log("sendBody"), console.log(c), fetch("./send.php", {
+          method: "POST",
+          body: c,
+          headers: {
+            "content-type": "application/x-www-form-urlencoded"
+          }
+        }).then(function (e) {
+          (console.log(e), e.ok) ? (alert("Заявка отправлена"), Array.prototype.slice.call(t.querySelectorAll("input")).forEach(function (e) {
+            return e.value = "";
+          })) : (alert("Ошибка отправки. Попробуйте позже."), console.error("Fetch: ".concat(e.statusText)));
+        });
+      });
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    $("#promodalGallery").fotorama({
+      width: "100%",
+      maxwidth: "100%",
+      ratio: 16 / 9,
+      allowfullscreen: !0,
+      nav: "thumbs",
+      thumbmargin: 20,
+      swipe: !0
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e = document.getElementById("header"),
+        t = window.scrollY;
+    t >= 100 && e.classList.add("fix"), t < 100 && e.classList.remove("fix"), window.addEventListener("scroll", function (n) {
+      (t = window.scrollY) >= 100 && e.classList.add("active"), t < 100 && e.classList.remove("active");
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    document.addEventListener("click", function (e) {
+      var t = document.querySelector("#map iframe");
+      "map" === e.target.id ? t.classList.add("active") : t.classList.remove("active");
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e = document.getElementById("html"),
+        t = document.getElementById("burger"),
+        n = document.getElementById("closeNav"),
+        o = document.getElementById("mobNav");
+
+    function l(t) {
+      t.classList.remove("active"), e.style.overflowX = "hidden", e.style.overflowY = "scroll";
+    }
+
+    function i(t) {
+      t.classList.add("active"), e.style.overflowX = "hidden", e.style.overflowY = "hidden";
+    }
+
+    t.addEventListener("click", function () {
+      i(o);
+    }), n.addEventListener("click", function () {
+      l(o);
+    });
+    var r = document.querySelectorAll(".header__navlink");
+    Array.prototype.slice.call(r).forEach(function (e) {
+      e.addEventListener("click", function (e) {
+        e.preventDefault(), l(o);
+      });
+    });
+    var c = document.getElementById("prodCard"),
+        a = document.getElementById("closeProdCard"),
+        s = document.querySelectorAll(".prodslider__slider-eyecont");
+    Array.prototype.slice.call(s).forEach(function (e) {
+      e.addEventListener("click", function (e) {
+        e.preventDefault(), i(c);
+        var t = e.target.parentElement.parentElement.children[3].children[0].innerText;
+        localStorage.setItem("blockNameForSend", t), console.log(t);
+      });
+    }), a.addEventListener("click", function (e) {
+      e.preventDefault(), l(c);
+    });
+    var d = document.getElementById("prodmodalToBuy"),
+        u = document.getElementById("buyModal"),
+        f = document.getElementById("closeBuyModal"),
+        m = document.querySelectorAll(".prodslider__slider-btn");
+    Array.prototype.slice.call(m).forEach(function (e) {
+      e.addEventListener("click", function (e) {
+        e.preventDefault(), i(u);
+        var t = e.target.parentElement.children[0].innerText;
+        localStorage.setItem("blockNameForSend", t), console.log(t);
+      });
+    }), f.addEventListener("click", function (e) {
+      e.preventDefault(), l(u);
+    }), d.addEventListener("click", function (e) {
+      e.preventDefault(), l(c), i(u);
+    });
+    var p = document.getElementById("telModal"),
+        v = document.getElementById("freeCall");
+    document.getElementById("closeTelModal").addEventListener("click", function (e) {
+      e.preventDefault(), l(p);
+    }), v.addEventListener("click", function (e) {
+      e.preventDefault(), i(p);
+    });
+    var g = document.getElementById("catalogModal");
+    document.getElementById("closeCatalogModal").addEventListener("click", function (e) {
+      e.preventDefault(), l(g);
+    });
+    var y = document.querySelectorAll(".prodslider__btn");
+    Array.prototype.slice.call(y).forEach(function (e) {
+      e.addEventListener("click", function (e) {
+        e.preventDefault(), i(g);
+        var t = "Заявка на каталог — ";
+        t += e.target.parentElement.parentElement.children[0].innerText, localStorage.setItem("blockNameForSend", t), console.log(t);
+      });
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    for (var e = $(".prodslider").find(".prodslider__slider"), t = 0; t <= e.length; t++) {
+      $(e[t]).slick({
+        infinite: !1,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        swipeToSlide: !0,
+        responsive: [{
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2,
+            arrows: !1,
+            dots: !0
+          }
+        }, {
+          breakpoint: 993,
+          settings: {
+            slidesToShow: 1,
+            arrows: !1,
+            dots: !0
+          }
+        }]
+      }).on("setPosition", function (e, t) {
+        t.$slides.css("height", t.$slideTrack.height() + "px");
+      });
+    }
+
+    $(".brands__slider").slick({
+      infinite: !1,
+      slidesToShow: 4,
       slidesToScroll: 1,
-      swipeToSlide: true,
+      swipeToSlide: !0,
       responsive: [{
         breakpoint: 1025,
         settings: {
           slidesToShow: 2,
-          arrows: false,
-          dots: true
+          arrows: !1,
+          dots: !0
         }
       }, {
         breakpoint: 993,
         settings: {
           slidesToShow: 1,
-          arrows: false,
-          dots: true
+          arrows: !1,
+          dots: !0
         }
       }]
-    }).on('setPosition', function (event, slick) {
-      slick.$slides.css('height', slick.$slideTrack.height() + 'px');
-    });
-  }
-
-  $('.brands__slider').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    responsive: [{
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 2,
-        arrows: false,
-        dots: true
-      }
-    }, {
-      breakpoint: 993,
-      settings: {
-        slidesToShow: 1,
-        arrows: false,
-        dots: true
-      }
-    }]
-  });
-  $('.reviews__slider').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false,
-    swipeToSlide: true,
-    responsive: [{
-      breakpoint: 1441,
-      settings: {
-        slidesToShow: 3
-      }
-    }, {
-      breakpoint: 1201,
-      settings: {
-        slidesToShow: 2
-      }
-    }, {
-      breakpoint: 993,
-      settings: {
-        slidesToShow: 1
-      }
-    }]
-  });
-  /*    /SLICK    */
-
-  /*    burger + card poup    */
-
-  var html = document.getElementById('html');
-  var burger = document.getElementById('burger');
-  var closeNav = document.getElementById('closeNav');
-  var mobNav = document.getElementById('mobNav');
-
-  function disableScroll() {
-    html.style.overflowX = 'hidden';
-    html.style.overflowY = 'hidden';
-  }
-
-  ;
-
-  function enableScroll() {
-    html.style.overflowX = 'hidden';
-    html.style.overflowY = 'scroll';
-  }
-
-  ;
-
-  function closeNavMob() {
-    mobNav.classList.remove('active');
-    enableScroll();
-  }
-
-  burger.addEventListener('click', function () {
-    mobNav.classList.add('active');
-    disableScroll();
-  });
-  closeNav.addEventListener('click', function () {
-    closeNavMob();
-  });
-  var navLinksNodeList = document.querySelectorAll('.header__navlink');
-  var navLinksList = Array.prototype.slice.call(navLinksNodeList);
-  navLinksList.forEach(function (link) {
-    link.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      closeNavMob();
-    });
-  });
-  var prodCard = document.getElementById('prodCard');
-  var closeProdCard = document.getElementById('closeProdCard');
-  var buyButtonNL = document.querySelectorAll('.prodslider__slider-btn');
-  var buyButtonList = Array.prototype.slice.call(buyButtonNL);
-
-  function closeProductCard() {
-    prodCard.classList.remove('active');
-    enableScroll();
-  }
-
-  function openProductCard() {
-    prodCard.classList.add('active');
-    disableScroll();
-  }
-
-  buyButtonList.forEach(function (btn) {
-    btn.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      openProductCard();
-    });
-  });
-  closeProdCard.addEventListener('click', function (ev) {
-    ev.preventDefault();
-    closeProductCard();
-  });
-  /*    /burger + card poup   */
-
-  /*    smooth scroll to element*/
-
-  var allLinkNL = document.querySelectorAll('a');
-  var allLinkList = Array.prototype.slice.call(allLinkNL);
-  var achorList = [];
-  allLinkList.forEach(function (anchor) {
-    var pattern = /^#/;
-    var href = anchor.getAttribute('href');
-    var test = pattern.exec(href);
-    if (test) achorList.push(anchor);
-  });
-  achorList.forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      var href = this.getAttribute('href').substring(1);
-      var scrollTarget = document.getElementById(href);
-      var elementPosition = scrollTarget.getBoundingClientRect().top;
-      var offsetPosition = elementPosition - 100;
-      window.scrollBy({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    });
-  });
-  /*    /smooth scroll to element*/
-
-  /*    watch more sentprod    */
-
-  var sentprodLoad = document.getElementById('sentprodLoad');
-  var startText = sentprodLoad.innerText;
-  var statusSentprodLoad = false;
-  sentprodLoad.addEventListener('click', function () {
-    if (!statusSentprodLoad) {
-      statusSentprodLoad = true;
-      var hiddenNL = document.querySelectorAll('.sentprod__map-item.hidden');
-      var hiddenList = Array.prototype.slice.call(hiddenNL);
-      hiddenList.forEach(function (item, i) {
-        item.classList.add('visible');
-        setTimeout(function () {
-          item.classList.add('active');
-        }, i * 100);
-      });
-      sentprodLoad.innerText = 'Скрыть список';
-    } else {
-      statusSentprodLoad = false;
-      var hiddenNL = document.querySelectorAll('.sentprod__map-item.hidden');
-      var hiddenList = Array.prototype.slice.call(hiddenNL);
-      hiddenList.forEach(function (item, i) {
-        item.classList.remove('active');
-        item.classList.remove('visible');
-      });
-      sentprodLoad.innerText = startText;
-    }
-  });
-  /*    /watch more sentprod    */
-
-  /*    MAP    */
-
-  document.addEventListener('click', function (e) {
-    var map = document.querySelector('#map iframe');
-
-    if (e.target.id === 'map') {
-      map.classList.add('active');
-    } else {
-      map.classList.remove('active');
-    }
-  });
-  /*    /MAP    */
-
-  /*    ANIM CIRCLE    */
-
-  var statusFaqAnim = false;
-
-  function startFaqAnim() {
-    statusFaqAnim = true;
-    setTimeout(function () {
-      statusFaqAnim = false;
-    }, 9000);
-    var minSec = 100;
-    var maxSec = 500;
-    var circle = document.getElementById('circleNum');
-    var circleTop = circle.style.top;
-    var circleLeft = circle.style.left;
-    var num1 = document.getElementById('circleNum1');
-    var num12 = document.getElementById('circleNum12');
-    var num2 = document.getElementById('circleNum2');
-    var num22 = document.getElementById('circleNum22');
-    var num3 = document.getElementById('circleNum3');
-    var num32 = document.getElementById('circleNum32');
-    var circleCoord = circle.getBoundingClientRect();
-    var num1Coord = num1.getBoundingClientRect();
-
-    function setCircleAnimStart() {
-      circle.classList.add('active');
-      var num1pos = $('#circleNum1').offset();
-      $('#circleNum').css('left', "".concat(num1pos.left, "px"));
-    }
-
-    function setCircleStartValue() {
-      circle.style.transition = 'all linear 1s';
-      circle.classList.remove('active');
-      circle.style.left = circleLeft;
-      circle.style.top = circleTop;
-    }
-
-    var prom1 = new Promise(function (resolve) {
-      setCircleAnimStart();
-      setTimeout(function () {
-        resolve();
-      }, 1000);
-    });
-    prom1.then(function () {
-      $('#circleNum').offset($('#circleNum3').offset());
-      setNumColor();
-    });
-    var nums = [num12, num22, num32];
-    var numsTimeout = [2500, 3000, 1600];
-
-    function setNumColor() {
-      var start = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-      if (start === nums.length) {
-        setCircleStartValue();
-        nums[start - 1].style.clip = 'rect(0px, 150px, 0px, 0px)';
-        return;
-      }
-
-      if (start != 0) nums[start - 1].style.clip = 'rect(0px, 150px, 0px, 0px)';
-      var num = nums[start];
-      num.classList.add('active');
-      num.style.clip = 'rect(0px, 150px, 300px, 0px)';
-      setTimeout(function () {
-        num.classList.remove('active');
-        start++;
-        setNumColor(start);
-        return;
-      }, numsTimeout[start]);
-    }
-  }
-  /*    /ANIM CIRCLE    */
-
-  /*    ANIM BLOCK TO CIRCLE    */
-
-
-  var block = document.getElementById('case');
-
-  var Visible = function Visible(target) {
-    var windowVW = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : windowVW;
-    // Все позиции элемента
-    var targetPosition = {
-      top: window.pageYOffset + target.getBoundingClientRect().top,
-      left: window.pageXOffset + target.getBoundingClientRect().left,
-      right: window.pageXOffset + target.getBoundingClientRect().right,
-      bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-    },
-        // Получаем позиции окна
-    windowPosition = {
-      top: window.pageYOffset,
-      left: window.pageXOffset,
-      right: window.pageXOffset + document.documentElement.clientWidth,
-      bottom: window.pageYOffset + document.documentElement.clientHeight
-    };
-    var center = targetPosition.top + target.offsetHeight / 2;
-
-    function setSwitch() {
-      // block.style.transform = 'scale'
-      var bgAnim = document.getElementById('bgAnim');
-      var textClipColor = document.getElementById('textClipColor');
-
-      function setScale(length) {
-        var animRadius = 250;
-        var animLeft = bgAnim.getBoundingClientRect().left;
-        var animVw = bgAnim.getBoundingClientRect().width; // if (animLeft < 0) {
-        // 	animVw = animVw - animLeft;
-        // }
-
-        if (window.innerWidth === 600) {
-          animRadius = 125;
+    }), $(".reviews__slider").slick({
+      infinite: !1,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: !1,
+      swipeToSlide: !0,
+      responsive: [{
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 3
         }
-
-        if (window.innerWidth < 600) return;
-        var rectLeft = animLeft + animVw; // rectLeft = 95 * rectLeft / 100
-
-        length = Math.round(length / 100) * 100; // console.log('math');
-        // console.log(length);
-
-        switch (length) {
-          case 0:
-          case 100:
-          case 200:
-          case 300:
-            bgAnim.style.transform = 'scale(1)'; // textClipColor.style.clipPath = `circle(74.5% at 0 ${animRadius}px)`;
-
-            break;
-
-          case 400:
-            bgAnim.style.transform = 'scale(2)'; // textClipColor.style.clipPath = `circle(1039.95px at 248.823px ${animRadius}px)`;
-
-            break;
-
-          case 500:
-            bgAnim.style.transform = 'scale(3)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
-
-            break;
-
-          case 600:
-            bgAnim.style.transform = 'scale(4)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
-
-            break;
-
-          case 700:
-            bgAnim.style.transform = 'scale(5)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
-
-            break;
-
-          case 800:
-            bgAnim.style.transform = 'scale(6)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
-
-            break;
-
-          case 900:
-          default:
-            bgAnim.style.transform = 'scale(7)'; // textClipColor.style.clipPath = `circle(${animVw}px at ${animLeft}px ${animRadius}px)`;
-
-            break;
+      }, {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 2
         }
-      }
+      }, {
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
 
-      if (targetPosition.top < windowPosition.top) {
-        // console.clear();
-        // console.log('элемент виден — сверху');
-        var length = windowPosition.top - targetPosition.top;
-        setScale(length);
+  n.r(t), t["default"] = function () {
+    var e = document.querySelectorAll("a"),
+        t = Array.prototype.slice.call(e),
+        n = [];
+    t.forEach(function (e) {
+      var t = e.getAttribute("href");
+      /^#/.exec(t) && n.push(e);
+    }), n.forEach(function (e) {
+      e.addEventListener("click", function (e) {
+        e.preventDefault();
+        var t = this.getAttribute("href").substring(1),
+            n = document.getElementById(t).getBoundingClientRect().top - 100;
+        window.scrollBy({
+          top: n,
+          behavior: "smooth"
+        });
+      });
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e = document.getElementById("sentprodLoad"),
+        t = e.innerText,
+        n = !1;
+    e.addEventListener("click", function () {
+      if (n) {
+        n = !1;
+        o = document.querySelectorAll(".sentprod__map-item.hidden");
+        Array.prototype.slice.call(o).forEach(function (e, t) {
+          e.classList.remove("active"), e.classList.remove("visible");
+        }), e.innerText = t;
       } else {
-        // console.clear();
-        // console.log('элемент виден — снизу');
-        var length = targetPosition.top - windowPosition.top; // console.log(length);
-
-        setScale(length);
+        n = !0;
+        var o = document.querySelectorAll(".sentprod__map-item.hidden");
+        Array.prototype.slice.call(o).forEach(function (e, t) {
+          e.classList.add("visible"), setTimeout(function () {
+            e.classList.add("active");
+          }, 100 * t);
+        }), e.innerText = "Скрыть список";
       }
-    }
-
-    if (targetPosition.bottom > windowPosition.top && targetPosition.top < windowPosition.bottom) {
-      // console.clear();
-      // console.log('блок полностью');
-      setSwitch();
-    } else {// Если элемент не видно, то запускаем этот код
-      // console.clear();
-    }
-
-    ;
-  };
-
-  var faq = document.getElementById('faq');
-
-  var circleToNums = function circleToNums(target) {
-    // Все позиции элемента
-    var targetPosition = {
-      top: window.pageYOffset + target.getBoundingClientRect().top,
-      bottom: window.pageYOffset + target.getBoundingClientRect().bottom
-    },
-        // Получаем позиции окна
-    windowPosition = {
-      top: window.pageYOffset,
-      bottom: window.pageYOffset + document.documentElement.clientHeight
-    };
-    var center = targetPosition.top + target.offsetHeight / 2;
-
-    if (targetPosition.bottom > windowPosition.top && targetPosition.top < windowPosition.bottom) {
-      // console.clear();
-      // console.log('блок полностью');
-      if (window.innerWidth > 1024 && !statusFaqAnim) startFaqAnim();
-    } else {// Если элемент не видно, то запускаем этот код
-      // console.clear();
-    }
-
-    ;
-  };
-
-  window.addEventListener('scroll', function () {
-    Visible(block);
-    circleToNums(faq);
-  });
-  Visible(block);
-  circleToNums(faq);
-  /*    /ANIM BLOCK TO CIRCLE    */
-
-  /*    FOTORAMA    */
-
-  $('#promodalGallery').fotorama({
-    width: '100%',
-    maxwidth: '100%',
-    ratio: 16 / 9,
-    allowfullscreen: true,
-    nav: 'thumbs',
-    thumbmargin: 20,
-    swipe: true
-  });
-  /*    /FOTORAMA    */
-
-  /*    mail    */
-
-  var formNL = document.querySelectorAll('.same__form');
-  var formList = Array.prototype.slice.call(formNL);
-  formList.forEach(function (form) {
-    $(form).on("submit", function (ev) {
-      ev.preventDefault();
-      var sendBody = $(this).serialize();
-      console.log(sendBody);
-      fetch("./send.php", {
-        method: "POST",
-        body: sendBody,
-        headers: {
-          "content-type": "application/x-www-form-urlencoded"
-        }
-      })["catch"](function (err) {
-        alert('Отправка не удалась');
-        console.log(err);
-      }).then(function (res) {
-        console.log(res);
-        alert('Заявка отправлена');
-      });
     });
+  };
+}, function (e, t, n) {
+  n(0), n(1), n(10), n(2), n(3), n(4), n(5), n(11), n(6), n(7), e.exports = n(8);
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {};
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t);
+  var o = n(3),
+      l = n(6),
+      i = n(5),
+      r = n(7),
+      c = n(8),
+      a = n(4),
+      s = n(0),
+      d = n(2),
+      u = n(1);
+  document.addEventListener("DOMContentLoaded", function () {
+    Object(o["default"])(), Object(l["default"])(), Object(i["default"])(), Object(r["default"])(), Object(c["default"])(), Object(a["default"])(), Object(s["default"])(), Object(d["default"])(), Object(u["default"])();
   });
-  /*    /mail    */
-});
+}]);

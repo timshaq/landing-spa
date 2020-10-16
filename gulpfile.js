@@ -7,6 +7,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
+const webpack = require("webpack-stream");
 const babel = require("gulp-babel");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
@@ -51,7 +52,14 @@ function presass() {
 
 function scripts() {
     return gulp.src(src.js)
-
+    .pipe(webpack({
+        watch: false,
+        module: {
+          rules: [
+            { test: /\.css$/, loader: 'style!css' },
+          ],
+        },
+    }))
     .pipe(babel())
     .on('error', console.error.bind(console))
     .pipe(concat(`script.js`))

@@ -150,3 +150,37 @@ html, body
 		font-size: 200px
 
 /*    /FONT SIZE    */
+
+
+.iti__flag
+	background-image: url("path/to/flags.png")
+
+.same__label
+	&.valid
+		&:before 
+			content: '✓'
+			position: absolute
+			top: 50%
+			right: 20px
+			transform: translateY(-50%)
+			font-size: 20px
+			font-weight: 900
+			z-index: 5
+			color: green
+	&.invalid
+		&:before 
+			content: '×'
+			position: absolute
+			top: 50%
+			right: 20px
+			transform: translateY(-50%)
+			font-size: 20px
+			font-weight: 900
+			z-index: 5
+			color: red
+
+button:disabled
+	background: darkgray
+	cursor: not-allowed
+.iti
+	width: 100% !important

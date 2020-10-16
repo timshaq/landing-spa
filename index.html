@@ -23,8 +23,15 @@
 
 	<link rel="stylesheet" href="build/lib/fotorama/fotorama.css">
 
+	<link rel="stylesheet" href="build/lib/mask/css/intlTelInput.min.css">
+
+
 	<script src="build/lib/jquery-3.5.1.min.js"></script>
 	<script src="build/lib/slick/slick.min.js"></script>
+
+	<script src="build/lib/inputmask.min.js"></script>
+
+	<script src="build/lib/mask/js/intlTelInput.min.js"></script>
 
 	<script src="build/lib/fotorama/fotorama.js"></script>
 
@@ -108,7 +115,7 @@
 				<img src="build/img/header__inst.png" alt="" class="header__phlink">
 			</a>
 			
-			<button class="header__col20 header__btn btn_blue" type="button">
+			<button class="header__col20 header__btn btn_blue" type="button" id="freeCall">
 				<span>Бесплатный звонок</span>
 				<img src="build/img/tel_white.png" alt="">
 			</button>
@@ -690,7 +697,7 @@
 
 		</div>
 		<div class="prodslider__row">
-			<button class="prodslider__btn" type="button">
+			<button class="prodslider__btn" type="button" >
 				Скачать весь каталог
 			</button>
 		</div>
@@ -758,7 +765,7 @@
 
 <section class="same">
 	<div class="fix-cont same__fix-cont">
-		<form class="same__form" id="open-form">
+		<form class="same__form" id="open-form" data-block="Хотите так же?">
 			<h2 class="same__title title_h2">
 				Хотите так же?
 			</h2>
@@ -813,11 +820,6 @@
 			</div>
 			
 			<div class="brands__slider-item">
-				<img src="build/img/brands__4.png" alt="" class="brands__slider-ph blur">
-				<img src="build/img/brands__4_hover.png" alt="" class="brands__slider-ph hover">
-			</div>
-			
-			<div class="brands__slider-item">
 				<img src="build/img/brands__1.png" alt="" class="brands__slider-ph blur">
 				<img src="build/img/brands__1_hover.png" alt="" class="brands__slider-ph hover">
 			</div>
@@ -833,8 +835,18 @@
 			</div>
 			
 			<div class="brands__slider-item">
-				<img src="build/img/brands__4.png" alt="" class="brands__slider-ph blur">
-				<img src="build/img/brands__4_hover.png" alt="" class="brands__slider-ph hover">
+				<img src="build/img/brands__1.png" alt="" class="brands__slider-ph blur">
+				<img src="build/img/brands__1_hover.png" alt="" class="brands__slider-ph hover">
+			</div>
+			
+			<div class="brands__slider-item">
+				<img src="build/img/brands__2.png" alt="" class="brands__slider-ph blur">
+				<img src="build/img/brands__2_hover.png" alt="" class="brands__slider-ph hover">
+			</div>
+			
+			<div class="brands__slider-item">
+				<img src="build/img/brands__3.png" alt="" class="brands__slider-ph blur">
+				<img src="build/img/brands__3_hover.png" alt="" class="brands__slider-ph hover">
 			</div>
 
 		</div>
@@ -1192,7 +1204,7 @@
 
 <section class="same">
 	<div class="fix-cont">
-		<form class="same__form" id="open-form2">
+		<form class="same__form" id="open-form2" data-block="Остались вопросы? Вопросы и ответы">
 			<h2 class="same__title title_h2">
 				Остались вопросы?
 			</h2>
@@ -1465,7 +1477,6 @@
 </main>
 
 <footer class="footer" id="map">
-
 		
 	<iframe class="footer__mapbg" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ca08e99e1dbd068bbf8aa43e9a7aa4c13e82b3b8d0d9fb9b31364459267a489&amp;source=constructor"  frameborder="0"></iframe>
 
@@ -1507,10 +1518,10 @@
 				</li>
 
 				<li class="footer__contacts-item">
-					<a class="footer__contact-link" href="https://yandex.ru/maps/-/CCQ~M6DV1D" target="_blank">
+					<a class="footer__contact-link" href="https://yandex.ru/maps/-/CCQ~aFbnxC" target="_blank">
 						<img src="build/img/footer__geo.png" alt="" class="footer__icon">
 						<span class="footer__text">
-							Адрес: г. Краснодар, 1й Лучистый проезд, 3, оф 1
+							Адрес: г. Краснодар, Силантьева 80/1
 						</span>
 					</a>
 				</li>
@@ -1519,7 +1530,7 @@
 		</section>
 
 		<section class="footer__row footer__form">
-			<form class="same__form" id="open-form3">
+			<form class="same__form" id="open-form3" data-block="Остались вопросы? Контакты">
 				<h2 class="same__title title_h2">
 					Остались вопросы?
 				</h2>
@@ -1533,7 +1544,7 @@
 					</label>
 					
 					<label class="same__label">
-						<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
+						<input type="text" class="same__input" name="tel" placeholder="Телефон" required>
 					</label>
 					
 					<label class="same__label">
@@ -1552,6 +1563,116 @@
 		</section>
 	</div>
 </footer>
+
+<div class="buymodal" id="buyModal">
+	<form class="same__form" id="open-form4">
+
+		<button type="button" class="buymodal__close" id="closeBuyModal">
+			<img src="build/img/close.png" alt="">
+		</button>
+		<h2 class="same__title title_h2">
+			Заявка на покупку
+		</h2>
+		<h3 class="same__subtitle">
+			Оставьте заявку и наши специалисты свяжутся с вами и проконсультуруют по всем имеющимся вопросам
+		</h3>
+		<div class="same__row">
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="name" placeholder="Введите имя" required>
+			</label>
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
+			</label>
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="email" placeholder="Введите e-mail">
+			</label>
+			
+		</div>
+		<div class="same__row">
+
+			<button class="same__btn btn_blue2" type="submit" form="open-form4">
+				Отправить
+			</button>
+			
+		</div>
+	</form>
+	
+</div>
+
+<div class="buymodal" id="telModal">
+	<form class="same__form" id="open-form5" data-block="Кнопка бесплатный звонок">
+
+		<button type="button" class="buymodal__close" id="closeTelModal">
+			<img src="build/img/close.png" alt="">
+		</button>
+		<h2 class="same__title title_h2">
+			Заявка на звонок
+		</h2>
+		<h3 class="same__subtitle">
+			Оставьте заявку и наши специалисты свяжутся с вами и проконсультуруют по всем имеющимся вопросам
+		</h3>
+		<div class="same__row">
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="name" placeholder="Введите имя" required>
+			</label>
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
+			</label>
+			
+		</div>
+		<div class="same__row">
+
+			<button class="same__btn btn_blue2" type="submit" form="open-form5">
+				Отправить
+			</button>
+			
+		</div>
+	</form>
+	
+</div>
+
+<div class="buymodal" id="catalogModal">
+	<form class="same__form" id="open-form6">
+
+		<button type="button" class="buymodal__close" id="closeCatalogModal">
+			<img src="build/img/close.png" alt="">
+		</button>
+		<h2 class="same__title title_h2">
+			Заявка на каталог
+		</h2>
+		<h3 class="same__subtitle">
+			Оставьте заявку и наши специалисты отправят вам каталог со всеми товарамина почту
+		</h3>
+		<div class="same__row">
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="name" placeholder="Введите имя" required>
+			</label>
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="tel" placeholder="Введите телефон" required>
+			</label>
+			
+			<label class="same__label">
+				<input type="text" class="same__input" name="email" placeholder="Введите e-mail" required>
+			</label>
+			
+		</div>
+		<div class="same__row">
+
+			<button class="same__btn btn_blue2" type="submit" form="open-form6">
+				Отправить
+			</button>
+			
+		</div>
+	</form>
+	
+</div>
 
 <section class="prodmodal" id="prodCard">
 	<div class="prodmodal__card">
@@ -1836,7 +1957,7 @@
 		</div>
 
 		<div class="prodmodal__row">
-			<button type="button" class="prodmodal__btn btn_blue2">
+			<button type="button" class="prodmodal__btn btn_blue2" id="prodmodalToBuy">
 				Купить
 			</button>
 		</div>
