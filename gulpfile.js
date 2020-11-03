@@ -13,6 +13,10 @@ const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const webp = require('gulp-webp');
+const webphtml = require('gulp-webp-html');
+const webpcss = require("gulp-webpcss");
+const changed = require('gulp-changed');
 
 
 const src = {
@@ -36,6 +40,7 @@ function presass() {
     .pipe(autopref())
     .pipe(sourcemaps.init())
     .pipe(concat(`style.css`))
+    .pipe(webpcss({webpClass: '.webp', noWebpClass: '.no-webp'}))
         .pipe(gulp.dest('./build/css/'))
     .pipe(cleanCSS({
         level: 2 
@@ -83,34 +88,55 @@ function library(cb) {
     cb()
 }
 
-function fonts(cb) {
-    gulp.src(['./src/fonts/*.ttf'])
+function fonts() {
+    gulp.src('./src/fonts/**/*')
+        .pipe(gulp.dest('./build/fonts/'))
+    gulp.src('./src/fonts/**/*.ttf')
         .pipe(ttf2woff())
         .pipe(gulp.dest('./build/fonts/'));
-    return gulp.src(['./src/fonts/*.ttf'])
+    return gulp.src('./src/fonts/**/*.ttf')
         .pipe(ttf2woff2())
         .pipe(gulp.dest('./build/fonts/'));
-    return gulp.src(src.fonts)
-        .pipe(gulp.dest('./build/fonts'))
-    cb()
 }
 
-
-function compress (cb) {
+// function checkImg() {
+//     .pipe(changed(`./build/img/`, {
+//         hasChanged: changed.compareLastModifiedTime
+//     }))
+//     .pipe(changed(`./build/img/`, {
+//         hasChanged: changed.compareContents
+//     }))
+// }
+function compress () {
   return gulp.src(src.img)
-  .pipe(imagemin({
-    progressive: true,
-    svgoPlugins: [{removeViewBox: false}],
-    interlaced: true,
-    optimizationlevel: 3
-  }))
-  .pipe(gulp.dest(`./build/img/`))
-  .pipe(browserSync.stream())
-cb()
+    .pipe(changed(`./build/img/`))
+        .pipe(
+            webp({
+                quality: 70
+            })
+        )
+        .pipe(gulp.dest(`./build/img/`))
+
+    .pipe(gulp.src(src.img))
+        .pipe(changed(`./build/img/`))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            interlaced: true,
+            optimizationlevel: 5
+        }))
+        .pipe(gulp.dest(`./build/img/`))
+    .pipe(browserSync.stream())
 }
 
 function clean() {
     return del(['build/css/*','build/fonts/*','build/img/*','build/js/*'])
+}
+
+function html() {
+    return gulp.src('./*.html')
+        .pipe(webphtml())
+        .pipe(gulp.dest('./build/'))
 }
 
 function watch() {
@@ -125,15 +151,15 @@ function watch() {
     gulp.watch(src.js, scripts)
     gulp.watch(src.lib, library)
     gulp.watch(src.fonts, fonts)
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./*.html", html).on('change', browserSync.reload);
 }
 
 
 //gulp.task('watch', watch);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(fonts, presass, scripts, compress, library)));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, fonts, presass, scripts, compress, library)));
 
-gulp.task('watch', gulp.series(clean, gulp.parallel(fonts, presass, scripts, compress, library), watch));
+gulp.task('watch', gulp.series(clean, gulp.parallel(html, fonts, presass, scripts, compress, library), watch));
 
 gulp.task('dev', gulp.series('build', 'watch'));
 
@@ -142,3 +168,4 @@ gulp.task('compress', compress);
 gulp.task('devsass', presass);
 gulp.task('devscripts', scripts);
 gulp.task('fonts', fonts);
+gulp.task('html', html);

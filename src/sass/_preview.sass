@@ -45,13 +45,18 @@
 			top: 800px
 		@media(max-width:500px)
 			right: -25vw
-			top: 1000px
+			top: 650px
 	&__row
 		padding: 240px 0 375px 0
-		background: url('../img/preview__bg.png')
-		background-size: cover
-		background-repeat: no-repeat
-		background-position: top center
+		background: url('../img/preview__bg.png') top center/cover no-repeat
+		background: url('../img/preview__bg.webp') top center/cover no-repeat
+		@media(max-width:500px)
+			padding: 240px 0 40px 0
+			background: url(../img/preview__bg.png) -48vw -40vw/250vw no-repeat
+			background: url(../img/preview__bg.webp) -48vw -40vw/250vw no-repeat
+		@media(max-width:375px)
+			background: url(../img/preview__bg_375.png) no-repeat
+			background: url(../img/preview__bg_375.webp) no-repeat
 		& .fix-cont
 			display: flex
 			justify-content: space-between

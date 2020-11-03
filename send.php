@@ -10,7 +10,7 @@ $email  = $_POST["email"];
 $block  = $_POST["block"];
 
 // $to          = "info@verandagroup.ru";
-$to          = "timur53shakirov@mail.ru";
+$to          = "timur53shakirov@mail.ru, info@verandagroup.ru, op-web2@region-media-yug.ru";
 $subject     = "Заявка На Бассейн";
 
 $text        = $name;

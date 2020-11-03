@@ -1,0 +1,123 @@
+[
+	{
+		"id": "gmb0001",
+		"name": "Aquagym Max Pro+ 449х231x130 Gypsum Gray",
+		"country": "Австралия",
+		"color_cup": "Gypsum (жемчужный)",
+		"color_termo": "Gray (серый)",
+		"img": [
+			"Aquagym_max_-800x800.jpg",
+			"l_aquagym-max-look-in-02-800x800.jpg",
+			"l_aquagym-max-gallery-03-v1-800x800.jpg",
+			"02_Aquagym_max-800x800.jpg",
+			"Aquagym-Max_light-01O-800x800.png",
+			"aquagymmax-size-overhead-opt-800x800.png"
+		],
+		"technical_parameters": {
+			"size": "449х231x130",
+			"number_seats": "4/1",
+			"number_therapeutic_seats": "4",
+			"therapeutic_class": "9 из 10",
+			"nozzles_type": "68/14",
+			"corner_nozzles": "нет",
+			"counterflow_nozzles": "3 -1800",
+			"pool_capacity": "7000",
+			"weight": "1105",
+			"weight_full": "8105",
+			"control_display": "2 шт, 4.3 Touch pad SpaNet (Австралия)",
+			"program_circulation_pump": "1x350 W",
+			"hydromassage_pump": "3hp х 3шт",
+			"air_massage_pump": "1х1000Вт",
+			"water_heater": "програмируемый 6 kw",
+			"electrical_requirements": "32А макс.",
+			"wifi_smart_link_module_mobile_control_annexes": "включено"
+		},
+		"base_configuration": {
+			"acrylic_bowl_aristech": "Thermobond, 4-слойная",
+			"frame": "Из оцинкованной стали",
+			"heat_resistant_pool_surround": "3 цвета",
+			"thermal_cover_with_locks": "включено",
+			"perimeter_foam_insulation": "чаши и основания",
+			"modes_4_intelligent_thermal_setting": "включено",
+			"filtration_system_filters": "3 фильтра",
+			"ozone_water_purifier": "PUREZONE 20 Вт",
+			"duraflex_water_supply": "включено",
+			"indicator": "температуры воды на обрамлении",
+			"backlight_water": "2 подводных светильника",
+			"aromatherapy": "включено",
+			"massage": "шеи",
+			"water_cascade": "включено",
+			"individual_hydromassage_setting": "включено",
+			"stainless_steel_nozzle_cover": "включено",
+			"basic_configuration_cost": "$27 100"
+		},
+		"add_options": {
+			"laminar illuminated nozzles": "4 шт, 290$",
+			"double_layer_foam_bowl": "$1 050",
+			"two_layer_foam_base": "$140",
+			"bowl_perimeter_illumination_cost": "$245",
+			"insulation_of_framing_panels_arctic": "$1 020",
+			"pool_set_cost": "$29 845"
+		}
+	},
+	{
+		"id": "gmb0002",
+		"name": "Cobalt 215x215x92 Gypsum Chocolate",
+		"country": "Австралия",
+		"color_cup": "Gypsum (жемчужный)",
+		"color_termo": "Gray (серый)",
+		"img": [
+			"Cobalt_-800x800.jpg",
+			"cobalt_size-overhead-800x800.png",
+			"Cobalt_l_look-in-02-800x800.jpg",
+			"Cobalt_l_look-in-01-800x800.jpg",
+			"Cobalt_l_look-in-03-800x800.jpg",
+			"Cobalt_light-01-800x800.png"
+		],
+		"technical_parameters": {
+			"size": "215х215x92",
+			"number_seats": "5/2",
+			"number_therapeutic_seats": "5",
+			"therapeutic_class": "8 из 10",
+			"nozzles_type": "57/24",
+			"pool_capacity": "1200",
+			"weight": "340",
+			"weight_full": "1540",
+			"control_display": "4.3 Touch pad SpaNet (Австралия)",
+			"program_circulation_pump": "1x250 W",
+			"hydromassage_pump": "1х 3hp",
+			"air_massage_pump": "1х1000Вт",
+			"water_heater": "4 режима, 1х3 кВт",
+			"electrical_requirements": "15А макс.",
+			"wifi_smart_link_module_mobile_control_annexes": "включено"
+		},
+		"base_configuration": {
+			"acrylic_bowl_aristech": "Thermobond, 4-слойная",
+			"frame": "Из литого высокопрочного пластика",
+			"heat_resistant_pool_surround": "3 цвета",
+			"thermal_cover_with_locks": "включено",
+			"perimeter_foam_insulation": "чаши и основания",
+			"modes_4_intelligent_thermal_setting": "включено",
+			"filtration_system_filters": "включено",
+			"ozone_water_purifier": "PUREZONE 20 Вт",
+			"duraflex_water_supply": "включено",
+			"indicator": "температуры воды на обрамлении",
+			"backlight_water": "1 подводный светильник",
+			"aromatherapy": "включено",
+			"holder_for_glasses": "включено",
+			"massage": "ног",
+			"water_cascade": "включено",
+			"individual_hydromassage_setting": "включено",
+			"stainless_steel_nozzle_cover": "включено",
+			"basic_configuration_cost": "$12 045"
+		},
+		"add_options": {
+			"laminar illuminated nozzles": "4 шт, 290$",
+			"double_layer_foam_bowl": "$340",
+			"two_layer_foam_base": "$65",
+			"bowl_perimeter_illumination_cost": "$200",
+			"insulation_of_framing_panels_arctic": "$370",
+			"pool_set_cost": "$13 310"
+		}
+	}
+]

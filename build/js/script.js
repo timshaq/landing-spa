@@ -7,12 +7,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   function n(o) {
     if (t[o]) return t[o].exports;
-    var l = t[o] = {
+    var i = t[o] = {
       i: o,
       l: !1,
       exports: {}
     };
-    return e[o].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
+    return e[o].call(i.exports, i, i.exports, n), i.l = !0, i.exports;
   }
 
   n.m = e, n.c = t, n.d = function (e, t, o) {
@@ -33,10 +33,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     if (n.r(o), Object.defineProperty(o, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) for (var l in e) {
-      n.d(o, l, function (t) {
+    }), 2 & t && "string" != typeof e) for (var i in e) {
+      n.d(o, i, function (t) {
         return e[t];
-      }.bind(null, l));
+      }.bind(null, i));
     }
     return o;
   }, n.n = function (e) {
@@ -48,7 +48,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     return n.d(t, "a", t), t;
   }, n.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 9);
+  }, n.p = "", n(n.s = 11);
 }([function (e, t, n) {
   "use strict";
 
@@ -62,13 +62,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       var t = document.getElementById("circleNum"),
           n = t.style.top,
           o = t.style.left,
-          l = document.getElementById("circleNum1"),
-          i = document.getElementById("circleNum12"),
-          r = (document.getElementById("circleNum2"), document.getElementById("circleNum22")),
+          i = document.getElementById("circleNum1"),
+          r = document.getElementById("circleNum12"),
+          l = (document.getElementById("circleNum2"), document.getElementById("circleNum22")),
           c = (document.getElementById("circleNum3"), document.getElementById("circleNum32"));
-      t.getBoundingClientRect(), l.getBoundingClientRect();
+      t.getBoundingClientRect(), i.getBoundingClientRect();
 
-      function a() {
+      function s() {
         t.style.transition = "all linear 1s", t.classList.remove("active"), t.style.left = o, t.style.top = n;
       }
 
@@ -83,16 +83,16 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
       }).then(function () {
         $("#circleNum").offset($("#circleNum3").offset()), function e() {
           var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-          if (t === s.length) return a(), void (s[t - 1].style.clip = "rect(0px, 150px, 0px, 0px)");
-          0 != t && (s[t - 1].style.clip = "rect(0px, 150px, 0px, 0px)");
-          var n = s[t];
+          if (t === d.length) return s(), void (d[t - 1].style.clip = "rect(0px, 150px, 0px, 0px)");
+          0 != t && (d[t - 1].style.clip = "rect(0px, 150px, 0px, 0px)");
+          var n = d[t];
           n.classList.add("active"), n.style.clip = "rect(0px, 150px, 300px, 0px)", setTimeout(function () {
             n.classList.remove("active"), t++, e(t);
-          }, d[t]);
+          }, a[t]);
         }();
       });
-      var s = [i, r, c],
-          d = [2500, 3e3, 1600];
+      var d = [r, l, c],
+          a = [2500, 3e3, 1600];
     }
 
     var n = document.getElementById("case"),
@@ -159,19 +159,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
       t.bottom > n.top && t.top < n.bottom && o();
     },
-        l = document.getElementById("faq"),
-        i = function i(n) {
+        i = document.getElementById("faq"),
+        r = function r(n) {
       var o = window.pageYOffset + n.getBoundingClientRect().top,
-          l = window.pageYOffset + n.getBoundingClientRect().bottom,
-          i = window.pageYOffset,
-          r = window.pageYOffset + document.documentElement.clientHeight;
+          i = window.pageYOffset + n.getBoundingClientRect().bottom,
+          r = window.pageYOffset,
+          l = window.pageYOffset + document.documentElement.clientHeight;
       n.offsetHeight;
-      l > i && o < r && window.innerWidth > 1024 && !e && t();
+      i > r && o < l && window.innerWidth > 1024 && !e && t();
     };
 
     window.addEventListener("scroll", function () {
-      o(n), i(l);
-    }), o(n), i(l);
+      o(n), r(i);
+    }), o(n), r(i);
   };
 }, function (e, t, n) {
   "use strict";
@@ -207,39 +207,38 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         preferredCountries: ["ru", "ua"]
       }),
           o = e.parentElement.parentElement,
-          l = function l() {
-        console.log(t), o.classList.remove("valid"), o.classList.remove("invalid");
+          i = function i() {
+        o.classList.remove("valid"), o.classList.remove("invalid");
       };
 
       e.addEventListener("blur", function () {
-        l();
+        i();
         if (e.value.trim()) if (t.isValidNumber()) o.classList.add("valid"), n[e] = !0;else {
           t.getValidationError();
           o.classList.add("invalid"), n[e] = !1;
         }
-      }), e.addEventListener("change", l), e.addEventListener("keyup", l);
+      }), e.addEventListener("change", i), e.addEventListener("keyup", i);
     });
-    document.getElementById("open-form"), document.getElementById("open-form2"), document.getElementById("open-form5"), document.getElementById("open-form3"), document.getElementById("open-form4"), document.getElementById("open-form6");
-    var l = document.querySelectorAll(".same__form");
-    Array.prototype.slice.call(l).forEach(function (t) {
+    var i = document.querySelectorAll(".same__form");
+    Array.prototype.slice.call(i).forEach(function (t) {
       $(t).on("submit", function (o) {
         o.preventDefault();
-        var l = this.querySelector('input[name="tel"]'),
-            i = (this.querySelector('button[type="submit"]'), this.querySelector('input[name="tel"]'));
-        if (i) e[i];
-        if (!n[l] || !i) return alert("Некорректно заполнены поля");
-        var r = $(this).attr("data-block"),
+        var i = this.querySelector('input[name="tel"]'),
+            r = (this.querySelector('button[type="submit"]'), this.querySelector('input[name="tel"]'));
+        if (r) e[r];
+        if (!n[i] || !r) return alert("Некорректно заполнены поля");
+        var l = $(this).attr("data-block"),
             c = $(this).serialize();
-        r ? (c += "&block=".concat(r), console.log("block"), console.log(r)) : (r = localStorage.getItem("blockNameForSend"), c += "&block=".concat(r), console.log("block"), console.log(r)), console.log("sendBody"), console.log(c), fetch("./send.php", {
+        l || (l = localStorage.getItem("blockNameForSend")), c += "&block=".concat(l), fetch("./send.php", {
           method: "POST",
           body: c,
           headers: {
             "content-type": "application/x-www-form-urlencoded"
           }
         }).then(function (e) {
-          (console.log(e), e.ok) ? (alert("Заявка отправлена"), Array.prototype.slice.call(t.querySelectorAll("input")).forEach(function (e) {
+          e.ok ? (alert("Заявка отправлена"), Array.prototype.slice.call(t.querySelectorAll("input")).forEach(function (e) {
             return e.value = "";
-          })) : (alert("Ошибка отправки. Попробуйте позже."), console.error("Fetch: ".concat(e.statusText)));
+          }), t.parentElement.remove("active"), html.style.overflowX = "hidden", html.style.overflowY = "scroll") : (alert("Ошибка отправки. Попробуйте позже."), console.error("Fetch: ".concat(e.statusText)));
         });
       });
     });
@@ -272,7 +271,28 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   "use strict";
 
   n.r(t), t["default"] = function () {
-    document.addEventListener("click", function (e) {
+    console.log("loaded");
+    $.getJSON("./build/lib/dataHeaders.json", function (t) {
+      console.log("headers"), console.log(t), $.getJSON("./build/lib/dataProducts.json", function (t) {
+        console.log("products"), console.log(t), t.map(function (t) {
+          $("#hydroSlider").slick("slickAdd", e(t.name, t.img[0], 1e5, t.id));
+        });
+      });
+    });
+    document.getElementById("hydroSlider"), document.getElementById("perelivSlider"), document.getElementById("swimSlider"), document.getElementById("accessSlider");
+
+    var e = function e(_e, t, n, o) {
+      var i = t.replace(".jpg", "").replace(".png", "");
+      return "\n\t\t\t<div class=\"prodslider__slider-item\">\n\t\t\t\t\n\t\t\t\t<div class=\"prodslider__slider-mask\"></div>\n\n\t\t\t\t<button class=\"prodslider__slider-eyecont\" data-product-id=\"".concat(o, "\" type=\"button\">\n\t\t\t\t\t<picture>\n\t\t\t\t\t\t<source srcset=\"build/img/slider__eye.webp\" type=\"image/webp\">\n\t\t\t\t\t\t<img src=\"build/img/slider__eye.png\" alt=\"\" class=\"prodslider__slider-eye\">\n\t\t\t\t\t</picture>\n\t\t\t\t</button>\n\n\t\t\t\t<div class=\"prodslider__slider-phcont\">\n\t\t\t\t\t<picture>\n\t\t\t\t\t\t<source srcset=\"").concat(i = "build/img/products/" + (i += ".webp"), "\" type=\"image/webp\">\n\t\t\t\t\t\t<img src=\"").concat(t = "build/img/products/" + t, "\" alt=\"\" class=\"prodslider__slider-ph\">\n\t\t\t\t\t</picture>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t<div class=\"prodslider__slider-row\">\n\t\t\t\t\t<h3 class=\"prodslider__slider-title\">\n\t\t\t\t\t\t").concat(_e, "\n\t\t\t\t\t</h3>\n\t\t\t\t\t<h4 class=\"prodslider__slider-price\">\n\t\t\t\t\t\t").concat(n, "\n\t\t\t\t\t</h4>\n\t\t\t\t\t<button class=\"prodslider__slider-btn\" type=\"button\">\n\t\t\t\t\t\t\u041A\u0443\u043F\u0438\u0442\u044C\n\t\t\t\t\t</button>\n\t\t\t\t</div>\n\n\t\t\t</div>\n\t\t\t");
+    };
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e = document.getElementById("map"),
+        t = document.createElement("iframe");
+    t.classList.add("footer__mapbg"), t.setAttribute("src", "https://yandex.ru/map-widget/v1/?um=constructor%3A7ca08e99e1dbd068bbf8aa43e9a7aa4c13e82b3b8d0d9fb9b31364459267a489&amp;source=constructor"), t.setAttribute("frameborder", "0"), e.append(t), document.addEventListener("click", function (e) {
       var t = document.querySelector("#map iframe");
       "map" === e.target.id ? t.classList.add("active") : t.classList.remove("active");
     });
@@ -286,67 +306,67 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         n = document.getElementById("closeNav"),
         o = document.getElementById("mobNav");
 
-    function l(t) {
+    function i(t) {
       t.classList.remove("active"), e.style.overflowX = "hidden", e.style.overflowY = "scroll";
     }
 
-    function i(t) {
+    function r(t) {
       t.classList.add("active"), e.style.overflowX = "hidden", e.style.overflowY = "hidden";
     }
 
     t.addEventListener("click", function () {
-      i(o);
+      r(o);
     }), n.addEventListener("click", function () {
-      l(o);
+      i(o);
     });
-    var r = document.querySelectorAll(".header__navlink");
-    Array.prototype.slice.call(r).forEach(function (e) {
+    var l = document.querySelectorAll(".header__navlink");
+    Array.prototype.slice.call(l).forEach(function (e) {
       e.addEventListener("click", function (e) {
-        e.preventDefault(), l(o);
+        e.preventDefault(), i(o);
       });
     });
     var c = document.getElementById("prodCard"),
-        a = document.getElementById("closeProdCard"),
-        s = document.querySelectorAll(".prodslider__slider-eyecont");
-    Array.prototype.slice.call(s).forEach(function (e) {
+        s = document.getElementById("closeProdCard"),
+        d = document.querySelectorAll(".prodslider__slider-eyecont");
+    Array.prototype.slice.call(d).forEach(function (e) {
       e.addEventListener("click", function (e) {
-        e.preventDefault(), i(c);
+        e.preventDefault(), r(c);
         var t = e.target.parentElement.parentElement.children[3].children[0].innerText;
         localStorage.setItem("blockNameForSend", t), console.log(t);
       });
-    }), a.addEventListener("click", function (e) {
-      e.preventDefault(), l(c);
+    }), s.addEventListener("click", function (e) {
+      e.preventDefault(), i(c);
     });
-    var d = document.getElementById("prodmodalToBuy"),
+    var a = document.getElementById("prodmodalToBuy"),
         u = document.getElementById("buyModal"),
         f = document.getElementById("closeBuyModal"),
         m = document.querySelectorAll(".prodslider__slider-btn");
     Array.prototype.slice.call(m).forEach(function (e) {
       e.addEventListener("click", function (e) {
-        e.preventDefault(), i(u);
+        e.preventDefault(), r(u);
         var t = e.target.parentElement.children[0].innerText;
         localStorage.setItem("blockNameForSend", t), console.log(t);
       });
     }), f.addEventListener("click", function (e) {
-      e.preventDefault(), l(u);
-    }), d.addEventListener("click", function (e) {
-      e.preventDefault(), l(c), i(u);
+      e.preventDefault(), i(u);
+    }), a.addEventListener("click", function (e) {
+      e.preventDefault(), i(c), r(u);
     });
     var p = document.getElementById("telModal"),
         v = document.getElementById("freeCall");
     document.getElementById("closeTelModal").addEventListener("click", function (e) {
-      e.preventDefault(), l(p);
-    }), v.addEventListener("click", function (e) {
       e.preventDefault(), i(p);
+    }), v.addEventListener("click", function (e) {
+      e.preventDefault(), r(p);
     });
     var g = document.getElementById("catalogModal");
     document.getElementById("closeCatalogModal").addEventListener("click", function (e) {
-      e.preventDefault(), l(g);
+      e.preventDefault(), i(g);
     });
     var y = document.querySelectorAll(".prodslider__btn");
     Array.prototype.slice.call(y).forEach(function (e) {
       e.addEventListener("click", function (e) {
-        e.preventDefault(), i(g);
+        e.preventDefault(), r(g);
         var t = "Заявка на каталог — ";
         t += e.target.parentElement.parentElement.children[0].innerText, localStorage.setItem("blockNameForSend", t), console.log(t);
       });
@@ -474,7 +494,18 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     });
   };
 }, function (e, t, n) {
-  n(0), n(1), n(10), n(2), n(3), n(4), n(5), n(11), n(6), n(7), e.exports = n(8);
+  "use strict";
+
+  n.r(t), t["default"] = function () {
+    var e, t;
+    e = function e(_e2) {
+      1 == _e2 ? document.querySelector("body").classList.add("webp") : document.querySelector("body").classList.add("no-webp");
+    }, (t = new Image()).onload = t.onerror = function () {
+      e(2 == t.height);
+    }, t.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+  };
+}, function (e, t, n) {
+  n(0), n(1), n(12), n(2), n(3), n(4), n(5), n(6), n(13), n(7), n(8), n(9), e.exports = n(10);
 }, function (e, t, n) {
   "use strict";
 
@@ -484,15 +515,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   n.r(t);
   var o = n(3),
-      l = n(6),
-      i = n(5),
-      r = n(7),
-      c = n(8),
-      a = n(4),
-      s = n(0),
-      d = n(2),
-      u = n(1);
-  document.addEventListener("DOMContentLoaded", function () {
-    Object(o["default"])(), Object(l["default"])(), Object(i["default"])(), Object(r["default"])(), Object(c["default"])(), Object(a["default"])(), Object(s["default"])(), Object(d["default"])(), Object(u["default"])();
-  });
+      i = n(7),
+      r = n(6),
+      l = n(8),
+      c = n(9),
+      s = n(5),
+      d = n(0),
+      a = n(2),
+      u = n(1),
+      f = n(10),
+      m = n(4);
+  Object(f["default"])(), document.addEventListener("DOMContentLoaded", function () {
+    Object(o["default"])(), Object(l["default"])(), Object(i["default"])(), Object(c["default"])(), Object(d["default"])(), Object(a["default"])(), Object(s["default"])(), Object(r["default"])(), Object(u["default"])();
+  }), window.onload = function () {
+    Object(m["default"])();
+  };
 }]);

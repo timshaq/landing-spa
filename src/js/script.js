@@ -9,26 +9,34 @@ import mapActive from './mapActive';
 import animation from './animation';
 import fotorama from './fotorama';
 import formHandler from './formHandler';
+import webpTest from './webpTest';
+import loadProducts from './loadProducts';
+
+	webpTest();
 
 document.addEventListener("DOMContentLoaded", function () {
 
 	headerFix();
 
+	smoothScrollToElement();
+
 	setSliders();
+
+	watchMoreBtnSentProd();
+
+	animation();
+
+	fotorama();
+
+	mapActive();
 
 	popups();
 
-	smoothScrollToElement()
-
-	watchMoreBtnSentProd()
-
-	mapActive()
-
-	animation()
-
-	fotorama()
-
-	formHandler()
+	formHandler();
 
 
 });
+
+window.onload = function() {
+	loadProducts();
+}

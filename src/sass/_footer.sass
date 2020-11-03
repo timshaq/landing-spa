@@ -2,23 +2,21 @@
 	padding-bottom: 150px
 	padding-top: 80px
 	margin-top: 150px
-	background: url('../img/footer__map.png')
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: top center
+	background: url('../img/footer__map.png') top center/cover no-repeat
+	background: url('../img/footer__map.webp') top center/cover no-repeat
 	min-height: 1082px
 	position: relative
 	@media(max-width:1024px)
 		min-height: 1160px
 	@media(max-width:992px)
-		min-height: none
+		min-height: auto
 		height: auto
 		padding-bottom: 40px
 		display: flex
 		flex-direction: column
 		justify-content: flex-start
 		align-items: center
-		background: rgba(56, 131, 226,.3)
+		background: rgba(56, 131, 226,.3) !important
 	&__mapbg
 		position: absolute
 		top: 0
@@ -135,26 +133,3 @@
 	&__text
 		line-height: 30px
 		margin-left: 15px
-.fix-cont
-
-.title
-	&_h2
-
-.same
-	&__form
-
-	&__title
-
-	&__subtitle
-
-	&__row
-
-	&__label
-
-	&__input
-
-	&__btn
-
-.btn
-	&_blue
-

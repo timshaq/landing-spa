@@ -59,7 +59,7 @@ var telInputs = Array.prototype.slice.call(telInputsNL);
 		var reset = function reset() {
 			// console.log('iti.getNumber()')
 			// console.log(iti.getNumber(intlTelInputUtils.numberFormat))
-			console.log(iti)
+			// console.log(iti)
 			label.classList.remove("valid");
 			label.classList.remove("invalid");
 		};
@@ -84,17 +84,6 @@ var telInputs = Array.prototype.slice.call(telInputsNL);
 
 
 
-
-	var formNameTel = [
-		document.getElementById('open-form'),
-		document.getElementById('open-form2'),
-		document.getElementById('open-form5'),
-	];
-	var formNameTelMail = [
-		document.getElementById('open-form3'),
-		document.getElementById('open-form4'),
-		document.getElementById('open-form6'),
-	];
 
 
 
@@ -123,17 +112,17 @@ var telInputs = Array.prototype.slice.call(telInputsNL);
 
 			if (block) {
 				sendBody += "&block=".concat(block);
-				console.log('block');
-				console.log(block);
+				// console.log('block');
+				// console.log(block);
 			} else {
 				block = localStorage.getItem('blockNameForSend');
 				sendBody += "&block=".concat(block);
-				console.log('block');
-				console.log(block);
+				// console.log('block');
+				// console.log(block);
 			}
 
-			console.log('sendBody');
-			console.log(sendBody);
+			// console.log('sendBody');
+			// console.log(sendBody);
 			fetch("./send.php", {
 				method: "POST",
 				body: sendBody,
@@ -141,12 +130,15 @@ var telInputs = Array.prototype.slice.call(telInputsNL);
 				"content-type": "application/x-www-form-urlencoded"
 				}
 			}).then(function (res) {
-				console.log(res);
+				// console.log(res);
 
 				if (res.ok) {
 					alert('Заявка отправлена');
 					var inputs = Array.prototype.slice.call(form.querySelectorAll('input'))
 					inputs.forEach(inp => inp.value='')
+					form.parentElement.remove('active');
+					html.style.overflowX = 'hidden';
+					html.style.overflowY = 'scroll';
 				} else {
 					alert('Ошибка отправки. Попробуйте позже.');
 					console.error("Fetch: ".concat(res.statusText));
