@@ -1523,10 +1523,6 @@ button:disabled {
   transition: all ease .5s;
 }
 
-.prodslider__slider-item .prodslider__slider-price:before {
-  content: '₽';
-}
-
 @media (max-width: 449px) {
   .prodslider__slider-item .prodslider__slider-price {
     left: 50%;

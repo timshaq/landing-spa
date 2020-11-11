@@ -46,58 +46,6 @@ export default function() {
 	});
 	// MOBILE NAVIGATION
 
-	// PRODUCT CARD
-	var prodCard = document.getElementById('prodCard');
-	var closeProdCard = document.getElementById('closeProdCard');
-	var eyeButtonNL = document.querySelectorAll('.prodslider__slider-eyecont');
-	var eyeButtonList = Array.prototype.slice.call(eyeButtonNL);
-
-
-	eyeButtonList.forEach(function (btn) {
-		btn.addEventListener('click', function (ev) {
-			ev.preventDefault();
-			openEl(prodCard);
-			var name = ev.target.parentElement.parentElement.children[3].children[0].innerText;
-			localStorage.setItem('blockNameForSend', name);
-			console.log(name);
-		});
-	});
-
-	closeProdCard.addEventListener('click', function (ev) {
-		ev.preventDefault();
-		closeEl(prodCard);
-	});
-	// PRODUCT CARD
-
-	// PRODUCT CARD TO BUY MODAL
-	var prodmodalToBuy = document.getElementById('prodmodalToBuy');
-	var buyModal = document.getElementById('buyModal');
-	var closeBuyModalBtn = document.getElementById('closeBuyModal');
-
-	var buyButtonNL = document.querySelectorAll('.prodslider__slider-btn');
-	var buyButtonList = Array.prototype.slice.call(buyButtonNL);
-	buyButtonList.forEach(function (btn) {
-		btn.addEventListener('click', function (ev) {
-			ev.preventDefault();
-			openEl(buyModal);
-			var name = ev.target.parentElement.children[0].innerText;
-			localStorage.setItem('blockNameForSend', name);
-			console.log(name);
-		});
-	});
-
-	closeBuyModalBtn.addEventListener('click', function (ev) {
-		ev.preventDefault();
-		closeEl(buyModal);
-	});
-
-	prodmodalToBuy.addEventListener('click', function (ev) {
-		ev.preventDefault();
-		closeEl(prodCard);
-		openEl(buyModal);
-	});
-	// PRODUCT CARD TO BUY MODAL
-
 	// TEL MODAL
 	var telModal = document.getElementById('telModal');
 	var freeCall = document.getElementById('freeCall');
@@ -132,7 +80,7 @@ export default function() {
 			var name = "Заявка на каталог — ";
 			name += ev.target.parentElement.parentElement.children[0].innerText;
 			localStorage.setItem('blockNameForSend', name);
-			console.log(name);
+			// console.log(name);
 		});
 	});
 

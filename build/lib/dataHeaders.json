@@ -49,7 +49,7 @@
    "turbo_boost_system": "TurboBoost System",
    "hydromassage_control": "управление гидромассажем, шт.",
    "collar_massage": "массаж воротниковой зоны",
-   "экстим_форсунка": "экстим - форсунка",
+   "extim_nozzle": "экстим - форсунка",
    "volcano_nozzle": "вулкано-форсунка",
    "shiatsu_complex": "шиатсу комплекс",
    "fan_complex": "фан комплекс",
@@ -90,8 +90,8 @@
    "outside_temperature_sensor_on_display": "Датчик наружной температуры на дисплее",
    "steps": "Ступеньки",
    "purezone_filter_ultraviolet_water_treatment": "Фильтр Purezone, ультрафиолет очистка воды",
-   "basic_configuration_cost": "Стоимость базовой комплектации",
-   "laminar illuminated nozzles": "Laminar форсунки с подсветкой",
+   "price": "Стоимость базовой комплектации",
+   "laminar_illuminated_nozzles": "Laminar форсунки с подсветкой",
    "double_layer_foam_bowl": "Двухслойная пеноизоляция чаши ",
    "two_layer_foam_base": "Двухслойная пеноизоляция  основания",
    "two_layer_foam_insulation_for_bowl_and_base": "Двухслойная пеноизоляция чаши и основания",
@@ -111,5 +111,8 @@
    "cover_lifter_RD8700": "Подъемник крышки RD8700",
    "cover_lifter_stainless_steel": "Подьемник крышки (нержавейка)",
    "filter_set_purezone_in_box_Vortex": "Набор фильтров 2+1purezone в коробке от Vortex ",
-   "water_filter_spare": "Фильтр для очиски воды, запасной, 1 штука"
+   "water_filter_spare": "Фильтр для очиски воды, запасной, 1 штука",
+   "brand_acces": "Бренд",
+   "articul_access": "Артикул",
+   "stock_access": "В наличии"
 }
